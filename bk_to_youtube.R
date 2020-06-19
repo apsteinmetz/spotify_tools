@@ -1,16 +1,24 @@
 # make playlist for spotify
 # devtools::install_github('charlie86/spotifyr')
+devtools::install_github("soodoku/tuber", build_vignettes = TRUE)
 library(tidyverse)
-library(spotifyr)
-# relies on spotify credentials stored in system environment variables
-play_date <- "2020-06-13"
+library(tuber)
+# relies on youtube credentials stored in system environment variables
+# in in .httr-oath
+yt_oauth()
+yt_token()
+
+play_date <- "2020-05-30"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date,", SXM show")
 
+
+
+q <- paste(playlist[1,]$artist,playlist[1,]$song)
 # -------------------------------------------------------
-get_spotify_track <- function(q){
-   result1 <- search_spotify(q,type="track",market="US")
+get_youtube_track <- function(q){
+   result1 <- yt_search(q,max_results = 10)
    if(is_empty(result1)){
       retval <-tibble(spot_artist=NA,spot_name = NA,track_uri=NA)
    }else{
@@ -59,8 +67,7 @@ playlist <- bind_cols(playlist,uri_list)
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
 missing_tracks <- playlist %>% filter(is.na(track_uri)) %>% 
    mutate(a_s = paste0(artist,", ",song))
-missing_tracks %>% select(a_s
-                          ) %>% print(n=25)
+missing_tracks %>% select(a_s) %>% print(n=25)
 
 
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
@@ -69,15 +76,3 @@ spot_playlist <- create_playlist(user_id = get_my_profile()$id,
                                 description = show_desc)
 
 spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
-
-
-# make text for facebook post
-spot_playlist$external_urls$spotify
-fb <- paste("Spotify playlist is up.","",
-            "Playlist URL:",
-            spot_playlist$external_urls$spotify,"",
-            "Missing Tracks:",
-            paste(missing_tracks$a_s,collapse = "\n"),"",
-            sep = "\n")
-
-writeClipboard(fb)
