@@ -3,10 +3,9 @@
 library(tidyverse)
 library(spotifyr)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-06-13"
+play_date <- "2020-06-20"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
-show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date,", SXM show")
 
 # -------------------------------------------------------
 get_spotify_track <- function(q){
@@ -59,19 +58,22 @@ playlist <- bind_cols(playlist,uri_list)
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
 missing_tracks <- playlist %>% filter(is.na(track_uri)) %>% 
    mutate(a_s = paste0(artist,", ",song))
-missing_tracks %>% select(a_s
-                          ) %>% print(n=25)
+missing_tracks %>% select(a_s) %>% print(n=25)
 
+show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date," SXM show. ",
+                   nrow(missing_tracks), " of ", nrow(playlist),
+                   " songs missing.  See Bill's Facebook page for complete track list.")
 
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
+
 spot_playlist <- create_playlist(user_id = get_my_profile()$id,
                                 name = show_name,
                                 description = show_desc)
 
 spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
 
-
-# make text for facebook post
+# ----------------------------------------------------------------------
+# make text for facebook post and copy to clipboard
 spot_playlist$external_urls$spotify
 fb <- paste("Spotify playlist is up.","",
             "Playlist URL:",
