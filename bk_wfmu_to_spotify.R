@@ -8,8 +8,9 @@ library(lubridate)
 # relies on spotify credentials stored in system environment variables
 
 load("../wfmu/playlists.rdata")
-bk <- filter(playlists,DJ=="TW") %>% 
-   rename(artist = Artist,song = Title) %>% 
+bk <- filter(playlists,DJ=="TW") %>%
+   rename(artist = Artist,song = Title) %>%
+   mutate(artist = str_remove(artist,"^The ")) %>% 
    mutate(a_s = paste(artist,";" ,song)) %>% 
    mutate(y = year(AirDate)) %>% 
    mutate(era = cut(y,4,labels = c("I","II","III","IV")))
@@ -54,11 +55,6 @@ get_track_uri <- function(q){
 
 playlist <- bk_top_100
 
-playlist_for_era <- function(era1){
-   filter(bk_top_100,era == era1)
-}
-
-
 # SEARCH FOR SONG AT SPOTIFY AND RETRIEVE URI FOR PLAYLIST
 #why doesn't this work?
 #new_playlist <- playlist %>% 
@@ -70,7 +66,6 @@ for (n in 1:nrow(playlist)) {
                                                            " artist:",playlist[n,]$artist)))
 }
 
-get_spotify_track("track:Where Evil Grows artist:The Gore Gore Girls")
 
 playlist <- bind_cols(playlist,uri_list)
 
@@ -110,7 +105,7 @@ make_playlist_at_spotify <- function(era1){
 }
 
 
-playlist_url <- make_playlist_at_spotify("II")
+playlist_urls <- map(levels(bk$era),make_playlist_at_spotify)
 # ----------------------------------------------------------------------
 # make text for facebook post and copy to clipboard
 spot_playlist$external_urls$spotify
