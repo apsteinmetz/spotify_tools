@@ -40,6 +40,7 @@ words <- tokenizers::tokenize_words(pl_text_raw$line,strip_punct = TRUE) %>%
    unlist(recursive = FALSE)
 
 # get band words to add to dictionary
+# i found these at rock-bands.com
 band_words <- read_csv("band_words.dic") %>% as.list %>% .[[1]]
 # USE HUNSPELL SPELL CHECKER
 words_df <- enframe(words,name=NULL,value="word") %>%
