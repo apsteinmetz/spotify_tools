@@ -39,11 +39,12 @@ pl_text_raw
 words <- tokenizers::tokenize_words(pl_text_raw$line,strip_punct = TRUE) %>%
    unlist(recursive = FALSE)
 
-
+# get band words to add to dictionary
+band_words <- read_csv("band_words.dic") %>% as.list %>% .[[1]]
 # USE HUNSPELL SPELL CHECKER
 words_df <- enframe(words,name=NULL,value="word") %>%
-   mutate(correct=hunspell_check(word)) %>%
-   mutate(suggestions=hunspell_suggest(word))
+   mutate(correct=hunspell_check(word,dict=dictionary(add_words = band_words))) %>%
+   mutate(suggestions=hunspell_suggest(word,dict=dictionary(add_words = band_words)))
 
 # get most likely term
 best_suggestion <- words_df$suggestions %>%
