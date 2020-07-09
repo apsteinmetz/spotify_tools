@@ -1,9 +1,10 @@
-# make playlist for spotify
+# make playlist for spotify from Bill Kelly's
+# SiriusXM playlist posts on Facebook
 # devtools::install_github('charlie86/spotifyr')
 library(tidyverse)
 library(spotifyr)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-06-27"
+play_date <- "2020-07-04"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
