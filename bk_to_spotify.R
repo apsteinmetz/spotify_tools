@@ -8,9 +8,12 @@ play_date <- "2020-07-04"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
+ac = get_spotify_access_token() # local override of environment variables
+
 # -------------------------------------------------------
 get_spotify_track <- function(q){
-   result1 <- search_spotify(q,type="track",market="US")
+   # local auth token in ac to override environment variables
+   result1 <- search_spotify(q,type="track",market="US",authorization = ac)
    if(is_empty(result1)){
       retval <-tibble(spot_artist=NA,spot_name = NA,track_uri=NA)
    }else{
@@ -22,7 +25,7 @@ get_spotify_track <- function(q){
 }
 # ------------------------------------------------------
 get_track_uri <- function(q){
-   result1 <- search_spotify(q,type="track",market="US")
+   result1 <- search_spotify(q,type="track",market="US",authorization = ac)
    if(is_empty(result1)){
       retval <- NA
    }else{
@@ -42,13 +45,14 @@ playlist <- read.delim(song_file,sep='"',col.names = c("artist","song","dummy"))
    mutate_all(str_trim) %>% 
    {.}
 
-
+# MAIN FLOW OF PROGRAM --------------------------------------------------
 # SEARCH FOR SONG AT SPOTIFY AND RETRIEVE URI FOR PLAYLIST
 #why doesn't this work?
 #new_playlist <- playlist %>% 
 #   mutate(track_uri = get_track_uri(paste0("track:",song," artist:",artist)))
 # so do it the old-fashioned way
-uri_list <- tibble() 
+uri_list <- tibble()
+print("Getting Track URIs")
 for (n in 1:nrow(playlist)) {
    uri_list <- bind_rows(uri_list,get_spotify_track(paste0("track:",playlist[n,]$song,
                                        " artist:",playlist[n,]$artist)))
@@ -66,6 +70,7 @@ show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date," 
                    " songs missing.  See Bill's Facebook page for complete track list.")
 
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
+print("Making Playlist at Spotify")
 
 spot_playlist <- create_playlist(user_id = get_my_profile()$id,
                                 name = show_name,
