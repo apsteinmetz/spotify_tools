@@ -41,7 +41,9 @@ playlist <- read.delim(song_file,sep='"',col.names = c("artist","song","dummy"))
    mutate(artist = str_remove_all(artist,"^CSW")) %>% 
    mutate(artist = str_replace_all(artist,"-"," ")) %>% 
    mutate(song = str_replace_all(song,"-"," ")) %>% 
+   mutate(song = str_replace_all(song,"/"," ")) %>% 
    mutate_all(str_remove_all,"[[:punct:]]") %>% 
+   # mutate(artist = str_remove_all(artist,"[[:punct:]]")) %>% 
    mutate_all(str_trim) %>% 
    {.}
 
