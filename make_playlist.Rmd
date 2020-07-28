@@ -1,0 +1,28 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(spotifyr)
+library(tidyverse)
+library(knitr)
+#assumes we have set the necessary tokens in environment variables
+access_token <- get_spotify_access_token()
+
+```
+test
+```{r}
+nirvana <- get_artist_audio_features('nirvana',return_closest_artist = TRUE)
+
+nirvana %>% 
+    count(key_mode, sort = TRUE) %>% 
+    head(5) %>% 
+    kable()
+
+```
+
