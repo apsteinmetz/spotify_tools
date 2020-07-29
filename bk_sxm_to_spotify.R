@@ -4,7 +4,7 @@
 library(tidyverse)
 library(spotifyr)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-07-26"
+play_date <- "2020-06-27"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -44,14 +44,11 @@ raw_playlist <- read_delim(song_file,delim='\"',
    # don't know what CSW is
    mutate(artist = str_remove_all(artist,"^CSW")) %>%
    mutate(artist = str_replace_all(artist,"-"," ")) %>%
-   #alt search term stripping "and the..." kinds of names
-   mutate(alt_artist = str_remove(artist,"( and .+)|(&.+)|(w\\/.+)")) %>%
    mutate(song = str_replace_all(song,"-"," ")) %>%
    mutate(song = str_replace_all(song,"/"," ")) %>%
+   mutate_all(str_replace_all,"&","and") %>%
    mutate_all(str_remove_all,"[[:punct:]]") %>%
    mutate_all(str_trim) %>%
-   rowid_to_column(var="id") %>%
-   {.}
 
 # MAIN FLOW OF PROGRAM --------------------------------------------------
 # SEARCH FOR SONG AT SPOTIFY AND RETRIEVE URI FOR PLAYLIST
@@ -64,17 +61,10 @@ print("Getting Track URIs")
 
 source("spotify fuzzy search.r")
 playlist <- raw_playlist
-uri_list <- tibble()
-for (n in 1:nrow(playlist)) {
-   cat(n," ")
-   result <- fuzzy_search_spotify(playlist$alt_artist[n],playlist$song[n])
-   if (!is.na(result[1])){
-      uri_list <- bind_rows(uri_list,result)
-   } else {
-      # pad with empty row
-      uri_list <- add_row(uri_list)
-   }
-}
+uri_list <- map(1:nrow(playlist),~fuzzy_search_spotify(playlist$artist[.],
+                                                       playlist$song[.],
+                                                       progress = TRUE)) %>% 
+   bind_rows()
 playlist <- bind_cols(playlist,uri_list)
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
