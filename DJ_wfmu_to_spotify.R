@@ -5,7 +5,8 @@ library(tidyverse)
 library(spotifyr)
 library(tidyverse)
 library(lubridate)
-source("spotify fuzzy search.r")
+library(spotfuzz) # local package
+
 # relies on spotify credentials stored in system environment variables
 
 load("../wfmu/playlists.rdata")
@@ -38,11 +39,9 @@ dj_top_songs <- dj_song_list %>%
 
 playlist <- dj_top_songs
 
-uri_list <- map(1:nrow(playlist),
-                ~fuzzy_search_spotify(playlist$artist[.],
-                                      playlist$song[.],
-                                      progress = TRUE)) %>% 
-   bind_rows()
+uri_list <- fuzzy_search_spotify(playlist$artist,
+                                      playlist$song,
+                                      progress = TRUE)
 
 playlist <- bind_cols(playlist,uri_list)
 
