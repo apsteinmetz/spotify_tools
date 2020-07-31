@@ -3,6 +3,7 @@
 # devtools::install_github('charlie86/spotifyr')
 library(tidyverse)
 library(spotifyr)
+library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
 play_date <- "2020-06-27"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
@@ -47,8 +48,9 @@ raw_playlist <- read_delim(song_file,delim='\"',
    mutate(song = str_replace_all(song,"-"," ")) %>%
    mutate(song = str_replace_all(song,"/"," ")) %>%
    mutate_all(str_replace_all,"&","and") %>%
-   mutate_all(str_remove_all,"[[:punct:]]") %>%
+   #mutate_all(str_remove_all,"[[:punct:]]") %>%
    mutate_all(str_trim) %>%
+   {.}
 
 # MAIN FLOW OF PROGRAM --------------------------------------------------
 # SEARCH FOR SONG AT SPOTIFY AND RETRIEVE URI FOR PLAYLIST
@@ -61,10 +63,9 @@ print("Getting Track URIs")
 
 source("spotify fuzzy search.r")
 playlist <- raw_playlist
-uri_list <- map(1:nrow(playlist),~fuzzy_search_spotify(playlist$artist[.],
-                                                       playlist$song[.],
-                                                       progress = TRUE)) %>% 
-   bind_rows()
+uri_list <- fuzzy_search_spotify(playlist$artist,
+                                 playlist$song,
+                                 progress = TRUE)
 playlist <- bind_cols(playlist,uri_list)
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
