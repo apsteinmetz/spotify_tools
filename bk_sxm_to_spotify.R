@@ -11,29 +11,6 @@ show_name <-paste0("Blackhole_",play_date)
 
 ac = get_spotify_access_token() # local override of environment variables
 
-# -------------------------------------------------------
-get_spotify_track <- function(q){
-   # local auth token in ac to override environment variables
-   result1 <- search_spotify(q,type="track",market="US",authorization = ac)
-   if(is_empty(result1)){
-      retval <-tibble(spot_artist=NA,spot_name = NA,track_uri=NA)
-   }else{
-      retval <- tibble(spot_artist=result1$artists[[1]]$name,
-                       spot_name= result1[1,]$name,
-                       track_uri=result1[1,]$uri)
-   }
-   return(retval[1,])
-}
-# ------------------------------------------------------
-get_track_uri <- function(q){
-   result1 <- search_spotify(q,type="track",market="US",authorization = ac)
-   if(is_empty(result1)){
-      retval <- NA
-   }else{
-      retval <- track_uri=result1[1,]$uri[1]
-   }
-   return(retval)
-}
 # --------------------------------------------------------
 # load and clean up the playlist
 raw_playlist <- read_delim(song_file,delim='\"',
@@ -43,7 +20,7 @@ raw_playlist <- read_delim(song_file,delim='\"',
    mutate(song=if_else(!is.na(dummy),dummy,song)) %>%
    select(-dummy) %>%
    # don't know what CSW is
-   mutate(artist = str_remove_all(artist,"^CSW")) %>%
+   mutate(artist = str_remove_all(artist,"^CSW:")) %>%
    mutate(artist = str_replace_all(artist,"-"," ")) %>%
    mutate(song = str_replace_all(song,"-"," ")) %>%
    mutate(song = str_replace_all(song,"/"," ")) %>%
@@ -61,7 +38,6 @@ raw_playlist <- read_delim(song_file,delim='\"',
 print("Getting Track URIs")
 
 
-source("spotify fuzzy search.r")
 playlist <- raw_playlist
 uri_list <- fuzzy_search_spotify(playlist$artist,
                                  playlist$song,
@@ -80,11 +56,11 @@ show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date," 
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
 print("Making Playlist at Spotify")
 
-# spot_playlist <- create_playlist(user_id = get_my_profile()$id,
-#                                 name = show_name,
-#                                 description = show_desc)
-# 
-# spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
+spot_playlist <- create_playlist(user_id = get_my_profile()$id,
+                                name = show_name,
+                                description = show_desc)
+
+spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
 
 # ----------------------------------------------------------------------
 # make text for facebook post and copy to clipboard
