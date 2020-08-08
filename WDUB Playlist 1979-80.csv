@@ -1,0 +1,401 @@
+play order,title,artist,track.external_urls.spotify,track.duration_ms,track.popularity,track.track_number,track.uri,track.album.name,track.album.release_date
+2,The Golden Age of Rock 'n' Roll,Mott The Hoople,https://open.spotify.com/track/2M9aZcP4xcDiEvEChmHTsx,204093,25,1,spotify:track:2M9aZcP4xcDiEvEChmHTsx,The Hoople,1974
+3,"Rock And Roll, Hootchie Koo",Rick Derringer,https://open.spotify.com/track/5G7yKOQxh1RjxNeRdgoeW0,220494,33,1,spotify:track:5G7yKOQxh1RjxNeRdgoeW0,"Rock And Roll, Hootchie Koo",2015-02-24
+4,No More Heroes,The Stranglers,https://open.spotify.com/track/2Q7vTDvHLPGuUS5YEVHnNj,208720,0,10,spotify:track:2Q7vTDvHLPGuUS5YEVHnNj,Original New Wave,2020-07-31
+5,Sex & Drugs & Rock & Roll,Ian Dury,https://open.spotify.com/track/0DPdnWavHdhB5hJ6O0qS6d,186626,51,11,spotify:track:0DPdnWavHdhB5hJ6O0qS6d,New Boots and Panties!!,1977-09-30
+6,"Me, I Disconnect From You",Gary Numan / Tubeway Army,https://open.spotify.com/track/5zJTXLI9SP4kr95ed5qqu7,202733,31,1,spotify:track:5zJTXLI9SP4kr95ed5qqu7,Replicas Redux,1979
+7,Shoo Be Doo,The Cars,https://open.spotify.com/track/4b352js1XPPKfsA6Qxy6fb,98226,31,5,spotify:track:4b352js1XPPKfsA6Qxy6fb,Candy-O,1979
+8,Candy-O,The Cars,https://open.spotify.com/track/6tVcoaFJVBmHWctf8qC8pK,156133,45,6,spotify:track:6tVcoaFJVBmHWctf8qC8pK,Candy-O,1979
+9,Hey St. Peter,Flash and the Pan,https://open.spotify.com/track/0LjtuCIQ9VNBnNgH1Wpe7S,264626,46,1,spotify:track:0LjtuCIQ9VNBnNgH1Wpe7S,Collection,1995-01-01
+10,Long Cool Woman (In a Black Dress) - 1999 Remaster,The Hollies,https://open.spotify.com/track/5UwbnHhjnbinJH8TefuQfN,199200,64,7,spotify:track:5UwbnHhjnbinJH8TefuQfN,Distant Light (1999 Remaster),1971-10-08
+11,Stay in Time - LP & Single Version,Off Broadway,https://open.spotify.com/track/2lHmJewRJLHz9ST1J5Lzcj,173533,21,1,spotify:track:2lHmJewRJLHz9ST1J5Lzcj,On,1980-01-07
+12,Cruel to Be Kind,Nick Lowe,https://open.spotify.com/track/7D5ycpIrqwGNTQFKmzhDIg,210131,57,1,spotify:track:7D5ycpIrqwGNTQFKmzhDIg,Labour of Lust,1979
+13,2112: Overture / The Temples Of Syrinx / Discovery / Presentation / Oracle / Soliloquy / Grand Finale - Medley,Rush,https://open.spotify.com/track/6Po9FqcwIJq4xQtNZVXY6v?si=7BxSXdpbRQ-fZMOBYPwUzA,360000,,1,spotify:track:6Po9FqcwIJq4xQtNZVXY6v,2112,1976-04-01
+14,"Another Brick in the Wall, Pt. 2",Pink Floyd,https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV,238746,76,5,spotify:track:4gMgiXfqyzZLMhsksGmbQV,The Wall,1979-11-30
+15,Fire on the Mountain,The Marshall Tucker Band,https://open.spotify.com/track/4delgtiKX7L3nsbC0exhCS,236466,60,1,spotify:track:4delgtiKX7L3nsbC0exhCS,Searchin' for a Rainbow,1975-08-01
+16,Searchin' for a Rainbow,The Marshall Tucker Band,https://open.spotify.com/track/5zS2DXR0XKNsVQSCHGEhx2,185840,41,7,spotify:track:5zS2DXR0XKNsVQSCHGEhx2,Greatest Hits,2011-01-01
+17,Panama Red,New Riders of the Purple Sage,https://open.spotify.com/track/70hZyH0RrThMYtxqv5OGYb,167306,38,6,spotify:track:70hZyH0RrThMYtxqv5OGYb,The Best Of New Riders Of The Purple Sage,1971
+18,Ridin' In My Car - Live,NRBQ,https://open.spotify.com/track/6r90RAhCMqQ7rLT0XOyGNe,184123,25,6,spotify:track:6r90RAhCMqQ7rLT0XOyGNe,High Noon: Highlights & Rarities From 50 Years,2016-11-11
+19,Louisiana Lady,New Riders of the Purple Sage,https://open.spotify.com/track/4ZwlmpWJAdE7wZ4ZR3EskM,184933,22,10,spotify:track:4ZwlmpWJAdE7wZ4ZR3EskM,New Riders Of The Purple Sage,1971
+20,Outside Of A Small Circle Of Friends,Phil Ochs,https://open.spotify.com/track/19nKssBmsSIBXJPZ2HrfXH,220933,19,3,spotify:track:19nKssBmsSIBXJPZ2HrfXH,Pleasures Of The Harbor,1967
+21,Roadrunner (Once),Jonathan Richman & The Modern Lovers,https://open.spotify.com/track/1zMaPLfjieOq8DBr5xDkwF,283026,43,21,spotify:track:1zMaPLfjieOq8DBr5xDkwF,Roadrunner: The Beserkley Collection,2004-07-19
+22,Shadow Play,Rory Gallagher,https://open.spotify.com/track/15PTVLJS4Kczhnwl0FWFsh,286983,45,6,spotify:track:15PTVLJS4Kczhnwl0FWFsh,Photo Finish (Remastered 2017),1978-10-01
+23,Thunder Island,Jay Ferguson,https://open.spotify.com/track/3FkQN4NyCFlfn7fWzBkWCj,240693,52,1,spotify:track:3FkQN4NyCFlfn7fWzBkWCj,Thunder Island,1978
+24,Shakedown Cruise,Jay Ferguson,https://open.spotify.com/track/4pNJhFtUGs7UQL61NiPP31,252440,30,1,spotify:track:4pNJhFtUGs7UQL61NiPP31,Real Life Ain't This Way,2005-07-26
+25,Hawaii Five-O,The Ventures,https://open.spotify.com/track/3UUwbJd2j4RORlalTUhaDk,113893,50,1,spotify:track:3UUwbJd2j4RORlalTUhaDk,Hawaii Five-O,1969
+26,Aloha Steve & Danno,Radio Birdman,https://open.spotify.com/track/2n4yt6ZWeOjY31bC5U0I1j,238293,35,1,spotify:track:2n4yt6ZWeOjY31bC5U0I1j,The Essential Radio Birdman,2001-07-17
+27,Refugee,Tom Petty and the Heartbreakers,https://open.spotify.com/track/4mcZYzoGwPRDdhWVlygiHf,201693,65,1,spotify:track:4mcZYzoGwPRDdhWVlygiHf,Damn The Torpedoes (Deluxe Edition),1979-10-19
+28,I Wanna Be Sedated,Ramones,https://open.spotify.com/track/5NoQvINZLBV1wMYPdNmReL,149786,66,7,spotify:track:5NoQvINZLBV1wMYPdNmReL,Road to Ruin (40th Anniversary Deluxe Edition),1978
+29,Rock 'N' Roll High School (Ed Stasium Version),Ramones,https://open.spotify.com/track/0CcnRBQmFt3QZKdarFovFt,138720,14,2,spotify:track:0CcnRBQmFt3QZKdarFovFt,En el Disco-Bar,2018-06-25
+30,Constantinople,The Residents,https://open.spotify.com/track/12hltjj9gODVp3wgvatDZ6,146466,28,1,spotify:track:12hltjj9gODVp3wgvatDZ6,Duck Stab,2016-09-09
+31,Bring on the Nubiles - 1996 Remaster,The Stranglers,https://open.spotify.com/track/3HIgeFgEGdVpi2dQQdpbOm,135680,22,5,spotify:track:3HIgeFgEGdVpi2dQQdpbOm,No More Heroes,1977
+32,Go All The Way,Raspberries,https://open.spotify.com/track/75GQIYnRaBg7ndHxhfYuQy,205346,64,1,spotify:track:75GQIYnRaBg7ndHxhfYuQy,Raspberries,1972
+33,Bad Time,Grand Funk Railroad,https://open.spotify.com/track/5h2XR7VWvJ7jPhbvCyuYee,176280,40,12,spotify:track:5h2XR7VWvJ7jPhbvCyuYee,Greatest Hits: Grand Funk Railroad (Remastered),2006-01-01
+34,Drive All Night,Elliott Murphy,https://open.spotify.com/track/7jP2vb4ZxaNWe6qmCfoClb,215933,9,1,spotify:track:7jP2vb4ZxaNWe6qmCfoClb,Just a Story from America,1977-02-01
+35,Make Me Smile (Come up and See Me) - 2014 Remaster,Steve Harley,https://open.spotify.com/track/184QpO8ZchGncbNyJe9SDT,239213,64,6,spotify:track:184QpO8ZchGncbNyJe9SDT,The Best Years of Our Lives (Deluxe Version),1975-03-22
+36,Cocaine,J.J. Cale,https://open.spotify.com/track/6G3NoUqDpqD3Rgfel2pD6s,169133,59,6,spotify:track:6G3NoUqDpqD3Rgfel2pD6s,Troubadour,1976-09
+37,Catch Us If You Can - 2019 - Remaster,The Dave Clark Five,https://open.spotify.com/track/7d91GO9HafgZuRUA2NjLTj,114733,34,14,spotify:track:7d91GO9HafgZuRUA2NjLTj,Having a Wild Weekend (Original Motion Picture Soundtrack) [2019 - Remaster],1965-01-01
+38,Message In A Bottle,The Police,https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO,290280,74,1,spotify:track:1oYYd2gnWZYrt89EBXdFiO,Reggatta De Blanc (Remastered 2003),1979-10-02
+39,Can't Stand Losing You,The Police,https://open.spotify.com/track/39ZC8fZuLGJfpoaTST7vw3,180693,46,2,spotify:track:39ZC8fZuLGJfpoaTST7vw3,The Very Best Of Sting And The Police,1997-01-01
+40,Waiting In Vain,Bob Marley & The Wailers,https://open.spotify.com/track/4Gq2ydMKhDZmctzkmk2bYo,256240,70,7,spotify:track:4Gq2ydMKhDZmctzkmk2bYo,Exodus (Deluxe Edition),1977-01-03
+41,Bring On The Night,The Police,https://open.spotify.com/track/4EkNINvDLeGgIL4zYGsYPb,255213,54,4,spotify:track:4EkNINvDLeGgIL4zYGsYPb,Reggatta De Blanc (Remastered 2003),1979-10-02
+42,Blue Collar Man (Long Nights),Styx,https://open.spotify.com/track/60F6ntlU0uSzgChmyQyVJP,247373,52,6,spotify:track:60F6ntlU0uSzgChmyQyVJP,Pieces Of Eight,1978-01-01
+43,Jennifer,Styx,https://open.spotify.com/track/4zH007LyjxTkWibXiMlBT0,258226,22,3,spotify:track:4zH007LyjxTkWibXiMlBT0,Crystal Ball,1976-01-01
+44,I Wanna Be With You,Raspberries,https://open.spotify.com/track/7AC2sIU1IhrsNsI5x3dImr,187720,36,1,spotify:track:7AC2sIU1IhrsNsI5x3dImr,Fresh,1972-01-01
+45,County Line,Pousette-Dart Band,https://open.spotify.com/track/1dEMgiE3ATplPWVkNGc2GI,211866,22,10,spotify:track:1dEMgiE3ATplPWVkNGc2GI,The Best of Pousette-Dart Band,1994-06-29
+46,Surrender,The J. Geils Band,https://open.spotify.com/track/4dnqrq79RHIb6Ek19nfeRN,231200,19,1,spotify:track:4dnqrq79RHIb6Ek19nfeRN,Monkey Island,1977-06-09
+47,Musta Got Lost - Live,The J. Geils Band,https://open.spotify.com/track/05GTtG1ckPWfGOC0mHGJ0V,394560,43,4,spotify:track:05GTtG1ckPWfGOC0mHGJ0V,Live: Blow Your Face Out,1976
+48,One Last Kiss - Remastered/2006,The J. Geils Band,https://open.spotify.com/track/7mC9ztRnPVE8KFpUNhJIik,263200,22,6,spotify:track:7mC9ztRnPVE8KFpUNhJIik,Best Of The J. Geils Band,2011-01-01
+49,Turn It on Again,Genesis,https://open.spotify.com/track/5KXTDunEgNVBnuSBDzsm6x,229333,52,7,spotify:track:5KXTDunEgNVBnuSBDzsm6x,Duke,1980-03-28
+50,Trouble Boys,Dave Edmunds,https://open.spotify.com/track/2wSQ3R8BBAG2lB16Wnh3Cg,182306,28,1,spotify:track:2wSQ3R8BBAG2lB16Wnh3Cg,Trax on Wax 4,2020-05-29
+51,Girls Talk,Dave Edmunds,https://open.spotify.com/track/5UBq9iGT7lfpibWr7KKqKe,209266,47,1,spotify:track:5UBq9iGT7lfpibWr7KKqKe,Repeat When Necessary,2020-05-15
+52,Freedom at Point Zero,Jefferson Starship,https://open.spotify.com/track/2oRXWD4ZK1RkHkmqvStz6r,269000,22,9,spotify:track:2oRXWD4ZK1RkHkmqvStz6r,Freedom At Point Zero,1979-11-01
+53,Wishing Well,Free,https://open.spotify.com/track/6TSBIfIbxuPDi1uqMqy1iV,220146,49,1,spotify:track:6TSBIfIbxuPDi1uqMqy1iV,Heartbreaker,1973-01-01
+54,Highway Song,Blackfoot,https://open.spotify.com/track/0R5nPSbAqQoNjKBByWnN95,450333,53,10,spotify:track:0R5nPSbAqQoNjKBByWnN95,Strikes,1979
+55,Wild Sanctuary - Live,Michael Stanley Band,https://open.spotify.com/track/1H5n7uHzHrivs0gMP5NeI9,261026,9,11,spotify:track:1H5n7uHzHrivs0gMP5NeI9,Stagepass,1977
+56,99,TOTO,https://open.spotify.com/track/2R3E4xKmy7lyieBKONkIMT,316053,51,3,spotify:track:2R3E4xKmy7lyieBKONkIMT,Hydra,1979-10-01
+57,Ridin' the Storm Out,REO Speedwagon,https://open.spotify.com/track/0SkmxNE5ydxiEN0hzJbMac,252266,50,1,spotify:track:0SkmxNE5ydxiEN0hzJbMac,Ridin' the Storm Out,1973-11-09
+58,Lights Out - 2008 Remaster,UFO,https://open.spotify.com/track/4BwQ3c9ZNdJcPKtQEcpfXz,275226,45,4,spotify:track:4BwQ3c9ZNdJcPKtQEcpfXz,Lights Out (2008 Remaster),1977-01-01
+59,Avenging Annie,Andy Pratt,https://open.spotify.com/track/2WPx4X6CtBRYW8PIUJRdMu,307373,32,1,spotify:track:2WPx4X6CtBRYW8PIUJRdMu,Andy Pratt,2016-04-01
+60,Another Nail In My Heart,Squeeze,https://open.spotify.com/track/7c3WIsUNdaMNbQQzL1Q56l,176173,42,2,spotify:track:7c3WIsUNdaMNbQQzL1Q56l,Argybargy,1980
+61,Ten Feet Tall - 2001 Digital Remaster,XTC,https://open.spotify.com/track/7EREJweyXYJsVO7mGpYV9J,196765,32,5,spotify:track:7EREJweyXYJsVO7mGpYV9J,Drums And Wires,1979-08-17
+62,Let My Love Open The Door,Pete Townshend,https://open.spotify.com/track/0otlwsD3mSogk7VJCTp6Kg,164653,58,4,spotify:track:0otlwsD3mSogk7VJCTp6Kg,Empty Glass,1980-04-21
+63,Feeling That Way,Journey,https://open.spotify.com/track/3WuG6JfzTUHTKwvvKT51zI,207893,52,2,spotify:track:3WuG6JfzTUHTKwvvKT51zI,Infinity,1978
+64,Anytime,Journey,https://open.spotify.com/track/2dcskJYRu9mMVPpAGJl3Er,208466,49,3,spotify:track:2dcskJYRu9mMVPpAGJl3Er,Infinity,1978
+65,Friday On My Mind,The Easybeats,https://open.spotify.com/track/2CT08rpgdut8qQs7IAzMGi,163293,59,18,spotify:track:2CT08rpgdut8qQs7IAzMGi,Easy,1965-01-01
+66,Fins,Jimmy Buffett,https://open.spotify.com/track/4h0gZ422QxBRdTV14u0P8y,204640,54,3,spotify:track:4h0gZ422QxBRdTV14u0P8y,Songs You Know By Heart,1985-01-01
+67,Nothing To Lose,U.K.,,,,,,,
+68,Conquistador,Procol Harum,https://open.spotify.com/track/2Wr1PqAw6bzMYhngpb3f96,158146,43,1,spotify:track:2Wr1PqAw6bzMYhngpb3f96,Procol Harum (2009 remaster),1967-09-01
+69,Surf City - Remastered 1990/Stereo Remix,Jan & Dean,https://open.spotify.com/track/4ZzXPeOfMXk0iKNQGdlzDq,163026,55,6,spotify:track:4ZzXPeOfMXk0iKNQGdlzDq,Surf City: The Best Of Jan & Dean,1990-01-01
+70,There's No Surf in Cleveland,The Euclid Beach Band,https://open.spotify.com/track/7d8rUQISXtGAesdgkMfRB4,274320,10,5,spotify:track:7d8rUQISXtGAesdgkMfRB4,Euclid Beach Band,1979-11-05
+71,Can't Stop Pretending,Artful Dodger,https://open.spotify.com/track/1bSsTnBWQ7n1ysPXp16cgd,230653,2,1,spotify:track:1bSsTnBWQ7n1ysPXp16cgd,Babes on Broadway,1977-03-01
+72,Fire And Water,Free,https://open.spotify.com/track/5jK9iJEBgHMQePlRukmnts,239760,39,1,spotify:track:5jK9iJEBgHMQePlRukmnts,Fire And Water,1970-06-26
+73,Cleveland Rocks - 2009 Remaster,Ian Hunter,https://open.spotify.com/track/5FBIJ3i1CWaZLf1VTNIh7B,228720,35,3,spotify:track:5FBIJ3i1CWaZLf1VTNIh7B,You're Never Alone with a Schizophrenic (Deluxe Version),1979-03-27
+74,Telecide,The Tubes,https://open.spotify.com/track/4eM6IO29P0oA6h7CWD642z,341893,10,11,spotify:track:4eM6IO29P0oA6h7CWD642z,Remote Control,1979-01-01
+75,Head First,The Babys,https://open.spotify.com/track/1stFVE7xE8t4Xz21IoT6Tb,240333,34,6,spotify:track:1stFVE7xE8t4Xz21IoT6Tb,Head First,1978-01-01
+76,Accidents Will Happen,Elvis Costello & The Attractions,https://open.spotify.com/track/7oR6vPgaw4QlXXmJ8IfKMg,180986,41,1,spotify:track:7oR6vPgaw4QlXXmJ8IfKMg,Armed Forces,1979
+77,The Jungle Line,Joni Mitchell,https://open.spotify.com/track/6C5xDvn42YYdohvSEjsoP2,264400,32,2,spotify:track:6C5xDvn42YYdohvSEjsoP2,The Hissing of Summer Lawns,1975-11-01
+78,We Are Crazy,Jean Yves Labat,https://open.spotify.com/track/2b8zoUGtjS7HooTAa31ZaX,178653,0,22,spotify:track:2b8zoUGtjS7HooTAa31ZaX,Smokin' In The Boys Room - 1973 Rock,2018-06-15
+79,(I Never Loved) Eva Braun,The Boomtown Rats,https://open.spotify.com/track/0Za1RTPrmcg6DsZTaZvcG0,277440,24,3,spotify:track:0Za1RTPrmcg6DsZTaZvcG0,A Tonic For The Troops,2005-01-01
+80,Cold Ethyl,Alice Cooper,https://open.spotify.com/track/5TNFOptlMaPOvMffvVcmxA,176600,36,7,spotify:track:5TNFOptlMaPOvMffvVcmxA,Welcome to My Nightmare,1975
+81,T.N.T.,AC/DC,https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb,214666,78,5,spotify:track:7LRMbd3LEoV5wZJvXT1Lwb,High Voltage,1976-05-14
+82,Spaced,Aerosmith,https://open.spotify.com/track/7uH4Cj39mhUc907ds3OmZF,261733,32,3,spotify:track:7uH4Cj39mhUc907ds3OmZF,Get Your Wings,1974-03-15
+83,Say Goodbye to Hollywood,Billy Joel,https://open.spotify.com/track/3YNFRvI0WnbvFdxUCQiKjR,276333,48,1,spotify:track:3YNFRvI0WnbvFdxUCQiKjR,Turnstiles,1976-05-19
+84,5-7-0-5,City Boy,https://open.spotify.com/track/5fjNaIxNBwvtTh7JsELIfv,192760,37,1,spotify:track:5fjNaIxNBwvtTh7JsELIfv,Book Early,1978
+85,Cities On Flame with Rock and Roll,Blue Öyster Cult,https://open.spotify.com/track/0M7oqERflkrJVHD3IAZqxo,242640,57,8,spotify:track:0M7oqERflkrJVHD3IAZqxo,Blue Oyster Cult,1972
+86,Detroit Breakdown,The J. Geils Band,https://open.spotify.com/track/3PNdIqIoqS8CB1zwU8UxKX,359173,26,5,spotify:track:3PNdIqIoqS8CB1zwU8UxKX,Best Of The J. Geils Band,1979-06-05
+87,Drivin' Sister,Mott The Hoople,https://open.spotify.com/track/4mcXdd6tAKZ2AV4TeOyCX8,233173,19,6,spotify:track:4mcXdd6tAKZ2AV4TeOyCX8,Mott (Expanded Edition),1973
+88,Prove It All Night,Bruce Springsteen,https://open.spotify.com/track/0Ye9OGxiHF3jylblTCuX7Q,237440,52,9,spotify:track:0Ye9OGxiHF3jylblTCuX7Q,Darkness On the Edge of Town,1978-06-02
+89,Love On the Wrong Side of Town,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/501MRMaNAgp909AAu2sPev,192306,20,4,spotify:track:501MRMaNAgp909AAu2sPev,The Best Of Southside Johnny And The Asbury Jukes,1976
+90,Sunday Will Never Be The Same,Spanky & Our Gang,https://open.spotify.com/track/42ccaJliexMY66rWpnaGId,180306,38,4,spotify:track:42ccaJliexMY66rWpnaGId,Spanky & Our Gang,1967-01-01
+91,Light Up,Styx,https://open.spotify.com/track/2LNPICgsfcNfqkUsrPpwEy,259533,36,1,spotify:track:2LNPICgsfcNfqkUsrPpwEy,Equinox,1975-01-01
+92,Teenage Love Affair,Rick Derringer,https://open.spotify.com/track/4zDb8AsEASOU8yobYNIixJ,200133,15,8,spotify:track:4zDb8AsEASOU8yobYNIixJ,All American Boy (Expanded Edition),1973-10-19
+93,Just What I Needed,The Cars,https://open.spotify.com/track/4alHo6RGd0D3OUbTPExTHN,225626,71,3,spotify:track:4alHo6RGd0D3OUbTPExTHN,The Cars,1978-06-06
+94,Redondo Beach,Patti Smith,https://open.spotify.com/track/6zCBk93V8M7fPriZj9i4dd,205173,47,2,spotify:track:6zCBk93V8M7fPriZj9i4dd,Horses (Legacy Edition),1975
+95,Because the Night,Patti Smith,https://open.spotify.com/track/0lIoY4ZQsdn5QzhraM9o9u,204800,66,3,spotify:track:0lIoY4ZQsdn5QzhraM9o9u,Easter,1978
+96,Ouch! - 2006 Remaster,The Rutles,https://open.spotify.com/track/6jZHWrIbWvrNDyHcvKxgWH,109319,21,10,spotify:track:6jZHWrIbWvrNDyHcvKxgWH,The Rutles,1978
+97,"""B"" Movies",Fabulous Poodles,https://open.spotify.com/track/2UBz9WaBdqjWL7ueYykUZa,199693,5,7,spotify:track:2UBz9WaBdqjWL7ueYykUZa,Unsuitable,1978-10-02
+98,Where Have You Been All My Life,Fotomaker,https://open.spotify.com/track/0O6hLhebUQGNFeCI8CpRyF,218128,17,1,spotify:track:0O6hLhebUQGNFeCI8CpRyF,Fotomaker,1978
+99,Beach Baby,First Class,https://open.spotify.com/track/3gOsZGaMej7EMVy6VBjxHM,293453,43,2,spotify:track:3gOsZGaMej7EMVy6VBjxHM,Sun Sea Sand And Sex,2009-05-18
+100,Heat Wave,Linda Ronstadt,https://open.spotify.com/track/3OwoQ968t9qJXYxFk7DCvu,165226,38,6,spotify:track:3OwoQ968t9qJXYxFk7DCvu,Prisoner in Disguise,1975
+101,Love At The Pier - Remastered,Blondie,https://open.spotify.com/track/41ChaFLDAx7X8bRSn2SUJR,148493,22,9,spotify:track:41ChaFLDAx7X8bRSn2SUJR,Plastic Letters,1978-02-01
+102,Dance Away,Roxy Music,https://open.spotify.com/track/6BKVev5kACyEaolcJkaUbz,228266,52,8,spotify:track:6BKVev5kACyEaolcJkaUbz,Manifesto (Remastered),1979-03-01
+103,TV Is King,The Tubes,https://open.spotify.com/track/7oVnpwt1Lyrt6wIMa3nppK,188093,18,2,spotify:track:7oVnpwt1Lyrt6wIMa3nppK,Remote Control,1979-01-01
+104,TV - Remastered,Dwight Twilley Band,https://open.spotify.com/track/3UnkUMqpKZoxOqTf30UHe8,136360,10,7,spotify:track:3UnkUMqpKZoxOqTf30UHe8,Sincerely,2011-01-01
+105,Blue Letter - 2017 Remaster,Fleetwood Mac,https://open.spotify.com/track/2hLclTG8XLSYTUjRlv2wrK,160786,38,3,spotify:track:2hLclTG8XLSYTUjRlv2wrK,Fleetwood Mac (2017 Remaster),1975-07-11
+106,I'll Be Waiting,Horslips,https://open.spotify.com/track/5j9sNs8X4EhYsnQtEpWYaM,389493,11,3,spotify:track:5j9sNs8X4EhYsnQtEpWYaM,The Man Who Built America (Bonus Tracks Version),2009-08-21
+107,Darlin',Triumvirate,,,,,,,
+108,Where Were You,Journey,https://open.spotify.com/track/5nrgyqDkpzvs9iM9cnycc2,180360,29,6,spotify:track:5nrgyqDkpzvs9iM9cnycc2,Departure,1980
+109,Cherry Baby,Starz,https://open.spotify.com/track/6LZVAsCB1OEjue9kjZwdyl,227586,22,1,spotify:track:6LZVAsCB1OEjue9kjZwdyl,Violation (Expanded Edition),1977-05-01
+110,Cherry - Live / 2008 Remaster,UFO,https://open.spotify.com/track/5mvISky0K66RN8JcCkZOrF,270720,26,2,spotify:track:5mvISky0K66RN8JcCkZOrF,Strangers in the Night (Live) (2008 Remaster),1979-01-29
+111,Don't Ever Say Goodbye,Rick Derringer,https://open.spotify.com/track/4b0zEcXuhDlIPmJBoDhose,218533,12,14,spotify:track:4b0zEcXuhDlIPmJBoDhose,"The Best Of Rick Derringer: Rock And Roll, Hoochie Koo",1996
+112,Can We Still Be Friends? - 2015 Remaster,Todd Rundgren,https://open.spotify.com/track/5MRIlJbi80rdC8mHUh5bpk,217693,50,2,spotify:track:5MRIlJbi80rdC8mHUh5bpk,Hermit of Mink Hollow,1978
+113,Temptation Eyes - Original,The Grass Roots,https://open.spotify.com/track/6KYEtZi2zMlIULXzca9mjp,154600,43,6,spotify:track:6KYEtZi2zMlIULXzca9mjp,Temptation Eyes,1994-01-01
+114,Beautiful Loser - Live In Detroit/1975,Bob Seger,https://open.spotify.com/track/1qRqgmMlMHxxHMLPJCTn4V,240001,45,3,spotify:track:1qRqgmMlMHxxHMLPJCTn4V,Live' Bullet,1976-04-12
+115,"Long, Long Way from Home",Foreigner,https://open.spotify.com/track/21D0muOMLK4P0jrsAYKLij,172573,46,6,spotify:track:21D0muOMLK4P0jrsAYKLij,Foreigner (Expanded),1977-03-08
+116,"Lonliness (Sigma Sound, Philadelphia, 1978) - Live",Horslips,https://open.spotify.com/track/3cyBzzRlap1T4yRlBqecXQ,260160,2,12,spotify:track:3cyBzzRlap1T4yRlBqecXQ,The Man Who Built America (Bonus Tracks Version),2009-08-21
+117,Feel Your Love Tonight - 2015 Remaster,Van Halen,https://open.spotify.com/track/2fZTVlNbTrOAt05ohKJ3ym,220960,47,8,spotify:track:2fZTVlNbTrOAt05ohKJ3ym,Van Halen (Remastered),1978-02-10
+118,Brighton Rock - Remastered 2011,Queen,https://open.spotify.com/track/4ObxJP7kYUkBqpiklCzrBo,310013,46,1,spotify:track:4ObxJP7kYUkBqpiklCzrBo,Sheer Heart Attack (Deluxe Remastered Version),1974-11-08
+119,In The Mood,Rush,https://open.spotify.com/track/2CB4yzH1SBr0q85YniII0M,213853,36,6,spotify:track:2CB4yzH1SBr0q85YniII0M,Rush,1974-01-01
+120,All I Want Is You,Roxy Music,https://open.spotify.com/track/1egCIlK7j1ioz15rh3BYHN,173800,34,3,spotify:track:1egCIlK7j1ioz15rh3BYHN,Country Life (Remastered),1974-11-01
+121,Without Love,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/0LjE172lQb3ewH9f7AQHAb,269760,17,7,spotify:track:0LjE172lQb3ewH9f7AQHAb,Havin' A Party With Southside Johnny,1976
+122,Trapped Again,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/3krl7sINykINxFRBkt05HN,255906,32,6,spotify:track:3krl7sINykINxFRBkt05HN,Havin' A Party With Southside Johnny,1976
+123,Midwest Midnight - Live,Michael Stanley Band,https://open.spotify.com/track/0X8oeGIEMz6SFSfqSMuHmW,368200,22,1,spotify:track:0X8oeGIEMz6SFSfqSMuHmW,Stagepass,1977
+124,Youth Nabbed As Sniper - Remastered,Blondie,https://open.spotify.com/track/2qOIGYRyK8956qxBCx6Jeu,183600,31,4,spotify:track:2qOIGYRyK8956qxBCx6Jeu,Plastic Letters,1978-02-01
+125,Dominance and Submission,Blue Öyster Cult,https://open.spotify.com/track/4cOqjEZyN13voCKivT0ae2,322173,38,3,spotify:track:4cOqjEZyN13voCKivT0ae2,Secret Treaties,1974-04-01
+126,young girls at market,bizzaros,,,,,,,
+127,I'm a Believer,Tin Huey,https://open.spotify.com/track/7up1vlUjVNIPzQd9HU7pFL,193093,3,1,spotify:track:7up1vlUjVNIPzQd9HU7pFL,Contents Dislodged During Shipment,1979-03-02
+128,Mongoloid,DEVO,https://open.spotify.com/track/3bGG7jaMbcx8JDl3gLUvo7,225333,43,5,spotify:track:3bGG7jaMbcx8JDl3gLUvo7,Q: Are We Not Men? A: We Are Devo!,1978
+129,Oliver's Army,Elvis Costello & The Attractions,https://open.spotify.com/track/1GIV1YzfuFzYAoUjwx3r7W,179613,60,3,spotify:track:1GIV1YzfuFzYAoUjwx3r7W,Armed Forces,1979
+130,Welcome To The Working Week,Elvis Costello,https://open.spotify.com/track/39rkLB2TEENIvhwAlRC5ae,83053,39,1,spotify:track:39rkLB2TEENIvhwAlRC5ae,My Aim Is True,1977-07-22
+131,Miracle Man,Elvis Costello,https://open.spotify.com/track/4PMmRKupIkdHQzSNxCPP1C,211373,33,2,spotify:track:4PMmRKupIkdHQzSNxCPP1C,My Aim Is True,1977-07-22
+132,Boy Crazy,The Tubes,https://open.spotify.com/track/2x1i7PKyWtdhxluSy1g1Cu,249240,15,7,spotify:track:2x1i7PKyWtdhxluSy1g1Cu,The Tubes,1975-01-01
+133,Black and White,Todd Rundgren,https://open.spotify.com/track/2NlDLaTogggnLizEgLPvMN,284066,7,7,spotify:track:2NlDLaTogggnLizEgLPvMN,Faithful,1976
+134,Search & Destroy,The Dictators,https://open.spotify.com/track/6M9hO0vCcNQEzSKfbT9b50,206786,14,9,spotify:track:6M9hO0vCcNQEzSKfbT9b50,Manifest Destiny,1977
+135,Too Hot to Handle - 2008 Remaster,UFO,https://open.spotify.com/track/6spqbkDz0sA29d8CA358F1,217866,41,1,spotify:track:6spqbkDz0sA29d8CA358F1,Lights Out (2008 Remaster),1977-01-01
+136,Carcass,Siouxsie and the Banshees,https://open.spotify.com/track/2OwRRgr6rGkO0qYPwkUaoN,229573,30,4,spotify:track:2OwRRgr6rGkO0qYPwkUaoN,The Scream,1978-11-13
+137,Sky Pilot,Eric Burdon & the Animals,https://open.spotify.com/track/1YlFODzWlgk4EFqlt4PkvB,443826,41,6,spotify:track:1YlFODzWlgk4EFqlt4PkvB,The Twain Shall Meet,1968-01-01
+138,Metropolis,Amon Düül II,https://open.spotify.com/track/1xYWMlzTgHwDdyO1X9WzhG,219409,6,6,spotify:track:1xYWMlzTgHwDdyO1X9WzhG,Made In Germany,1975
+139,Steppin' Out,The Dictators,https://open.spotify.com/track/0hkXnF5KhZoviUpQzomOJv,347306,11,6,spotify:track:0hkXnF5KhZoviUpQzomOJv,Manifest Destiny,1977
+140,Xanadu,Rush,https://open.spotify.com/track/5q7KiSN7znIONR76LAqm7k,664853,46,2,spotify:track:5q7KiSN7znIONR76LAqm7k,A Farewell To Kings,1977-09-01
+141,The Logical Song - Remastered 2010,Supertramp,https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ,251253,73,2,spotify:track:6mHOcVtsHLMuesJkswc0GZ,Breakfast In America (Deluxe Edition),1979-03-29
+142,Editions Of You,Roxy Music,https://open.spotify.com/track/3v8m161sv4NBY5QpM6ZdNY,231200,37,4,spotify:track:3v8m161sv4NBY5QpM6ZdNY,For Your Pleasure (Remastered),1973-03-01
+143,Peg,Steely Dan,https://open.spotify.com/track/5DQAHkO9U4IZIombHefcqK,240293,60,4,spotify:track:5DQAHkO9U4IZIombHefcqK,Aja,1977-01-01
+144,jackie run,rockspurs,,,,,,,
+145,Brick House,Commodores,https://open.spotify.com/track/5VJjhHyG8NZ5xdgG6uTb3P,208893,65,6,spotify:track:5VJjhHyG8NZ5xdgG6uTb3P,Commodores,1977-01-01
+146,Wake Nicodemus,Tim Curry,,,,,,,
+147,Kleenex - 2002 Remaster,Generation X,https://open.spotify.com/track/2dimoxuJQmkgwuCieQOs4Z,127000,15,5,spotify:track:2dimoxuJQmkgwuCieQOs4Z,Generation X (2002 Remaster),1978-04-08
+148,Candy's Room,Bruce Springsteen,https://open.spotify.com/track/19aoReRYJtOo2vWKPffECT,166240,42,4,spotify:track:19aoReRYJtOo2vWKPffECT,Darkness On the Edge of Town,1978-06-02
+149,Who's to Blame,Michael Stanley Band,https://open.spotify.com/track/27GMJ4V36GEBqtH5RnV6JS,191560,12,6,spotify:track:27GMJ4V36GEBqtH5RnV6JS,Cabin Fever,1998-04-01
+150,The Story In Your Eyes,The Moody Blues,https://open.spotify.com/track/3kcaix8VptngsWoYDTqEN2,176573,46,2,spotify:track:3kcaix8VptngsWoYDTqEN2,Every Good Boy Deserves Favour,1971-07-23
+151,(Don't Fear) The Reaper,Blue Öyster Cult,https://open.spotify.com/track/5QTxFnGygVM4jFQiBovmRo,308120,76,3,spotify:track:5QTxFnGygVM4jFQiBovmRo,Agents Of Fortune,1976
+152,"Come on, Come On",Cheap Trick,https://open.spotify.com/track/3bMYpXiFnKhVKnLz9RHna1,159306,31,9,spotify:track:3bMYpXiFnKhVKnLz9RHna1,In Color,1977-09
+153,Love Me Tonight,Head East,https://open.spotify.com/track/4QTRA2WSXCahYOeRuOcY8J,267360,29,3,spotify:track:4QTRA2WSXCahYOeRuOcY8J,Flat As A Pancake,1975-01-01
+154,Prime Time,The Tubes,https://open.spotify.com/track/1ugD8OInLTHKP7umbN3WHt,198973,25,3,spotify:track:1ugD8OInLTHKP7umbN3WHt,Remote Control,1979-01-01
+155,Lazy Ways,10cc,https://open.spotify.com/track/1dbvYK3hUrXYlFCJhDKn8q,260173,27,2,spotify:track:1dbvYK3hUrXYlFCJhDKn8q,How Dare You,1976
+156,Is She Really Going Out With Him?,Joe Jackson,https://open.spotify.com/track/29SRvYOKbMLOZeOubNGtLb,215066,60,3,spotify:track:29SRvYOKbMLOZeOubNGtLb,Look Sharp!,1979-01-05
+157,I'd Rather Be a Cowboy (Lady's Chains),John Denver,https://open.spotify.com/track/6BE7wBQqdQQudliybOH6r9,266053,28,1,spotify:track:6BE7wBQqdQQudliybOH6r9,Farewell Andromeda,1973
+158,Fire and Rain - 2019 Remaster,James Taylor,https://open.spotify.com/track/1oht5GevPN9t1T3kG1m1GO,203613,74,7,spotify:track:1oht5GevPN9t1T3kG1m1GO,Sweet Baby James (2019 Remaster),1970-02-01
+159,Don't Stop Loving Me,Rick Derringer,https://open.spotify.com/track/4MxzAQAwdORElRVnPzJ1a1,289533,6,1,spotify:track:4MxzAQAwdORElRVnPzJ1a1,Sweet Evil (Bonus Track),1977-02-01
+160,Sure the Boy Was Green,Horslips,https://open.spotify.com/track/5xkUCucfOfuFwynSVi3eM4,279266,9,4,spotify:track:5xkUCucfOfuFwynSVi3eM4,Aliens (Bonus Tracks Version),2009-12-04
+161,spacey romance,no dice,,,,,,,
+162,Last of the Rock Stars,Elliott Murphy,https://open.spotify.com/track/2UyCWWEUyljGZXSU3rBVYZ,225000,8,2,spotify:track:2UyCWWEUyljGZXSU3rBVYZ,Broken Poet (Original Motion Picture Soundtrack),2020-06-05
+163,Pretty Girls,Joe Jackson,https://open.spotify.com/track/409jKN8Chh8tzFiuKO4HpH,174200,28,10,spotify:track:409jKN8Chh8tzFiuKO4HpH,Look Sharp!,1979-01-05
+164,Long Live Rock N Roll,Rainbow,https://open.spotify.com/track/2ilsr4UkwAL10MspiJtKA3,264960,46,1,spotify:track:2ilsr4UkwAL10MspiJtKA3,Long Live Rock 'n' Roll,1978-01-01
+165,Diamonds and Rust,Judas Priest,https://open.spotify.com/track/2Z17Q91PB11tzkDh0QQtd6,203533,45,2,spotify:track:2Z17Q91PB11tzkDh0QQtd6,Sin After Sin,1977-11-15
+166,Kick It Out,Heart,https://open.spotify.com/track/4QUjwfigQ1qSv0E1jN5yOr,165466,38,5,spotify:track:4QUjwfigQ1qSv0E1jN5yOr,Little Queen,1977-05-14
+167,No Way Out,The Tubes,https://open.spotify.com/track/6zDG3IV0D8q3pi6ThoQJKz,202720,13,5,spotify:track:6zDG3IV0D8q3pi6ThoQJKz,Remote Control,1979-01-01
+168,Samson and Delilah - 2014 Remaster,Grateful Dead,https://open.spotify.com/track/1r4TpmnDEOEW7HCcCVoErG,207825,32,4,spotify:track:1r4TpmnDEOEW7HCcCVoErG,Terrapin Station (2014 Remaster),1977
+169,Call Me,Blondie,https://open.spotify.com/track/7HKxTNVlkHsfMLhigmhC0I,212226,66,1,spotify:track:7HKxTNVlkHsfMLhigmhC0I,Call Me,2004-01-01
+170,Bloody Well Right,Supertramp,https://open.spotify.com/track/2SmlWvdYG6FsagxN3FkHMI,272432,56,2,spotify:track:2SmlWvdYG6FsagxN3FkHMI,Crime Of The Century (Remastered),1974-09-01
+171,War Baby Son of Zorro,Hall and Oates,https://open.spotify.com/track/69bMk8sKwq1bxa4lEnuLyT,252786,13,6,spotify:track:69bMk8sKwq1bxa4lEnuLyT,War Babies,1974
+172,Full Moon Man,Grace Slick,https://open.spotify.com/track/1DAtS0UnOC3dKGDaHEluJY,307240,11,7,spotify:track:1DAtS0UnOC3dKGDaHEluJY,Dreams,1980-03-18
+173,Train in Vain (Stand by Me) - Remastered,The Clash,https://open.spotify.com/track/6ITuEsxEy2qPhqMowdDAeI,194666,65,19,spotify:track:6ITuEsxEy2qPhqMowdDAeI,London Calling (Remastered),1979
+174,silver lady,intergalactic turing band,,,,,,,
+175,Determination,Todd Rundgren,https://open.spotify.com/track/6gTG2wkf1P2n0JqEvaOO8I,192173,9,6,spotify:track:6gTG2wkf1P2n0JqEvaOO8I,Hermit of Mink Hollow,1978
+176,Nothing To Fear,New England,https://open.spotify.com/track/3oaKXnGIBUFCAfWHc6Li35,304826,6,6,spotify:track:3oaKXnGIBUFCAfWHc6Li35,New England,1979-01-01
+177,Touch Me,The Doors,https://open.spotify.com/track/4BVE5tIIpYabZcYCbephNW,190253,67,2,spotify:track:4BVE5tIIpYabZcYCbephNW,The Soft Parade,1969-07-21
+178,Magic Carpet Ride,Steppenwolf,https://open.spotify.com/track/4c4jJJoaiY21t2TyRZgdWS,271573,72,7,spotify:track:4c4jJJoaiY21t2TyRZgdWS,The Second,1968-10-01
+179,Raise A Little Hell,Trooper,https://open.spotify.com/track/1yNz3A4ubmE5IEvpNFkjdc,222426,50,10,spotify:track:1yNz3A4ubmE5IEvpNFkjdc,Thick As Thieves,1978-01-01
+180,Jailbreak,Thin Lizzy,https://open.spotify.com/track/4qbiCq2xkNPyojuZFeNeqx,240600,61,1,spotify:track:4qbiCq2xkNPyojuZFeNeqx,Jailbreak (Deluxe Edition),1976
+181,Smokin' in the Boy's Room,Brownsville Station,https://open.spotify.com/track/1AIGp3gpj1NXJvh3engmUQ,176453,46,10,spotify:track:1AIGp3gpj1NXJvh3engmUQ,Yeah! (US Internet Release),1973
+182,Mystery Achievement - 2006 Remaster,Pretenders,https://open.spotify.com/track/2xTk109VtSva8rmQvb2Esn,322906,34,12,spotify:track:2xTk109VtSva8rmQvb2Esn,Pretenders,1980-01-11
+183,Do You Believe I Love You,Carolyne Mas,https://open.spotify.com/track/7uPDSyFZQi9RHNg3qUCE5d,182674,0,8,spotify:track:7uPDSyFZQi9RHNg3qUCE5d,Carolyne Mas,2018-02-27
+184,Taking It To Detroit,Good Rats,https://open.spotify.com/track/7kYCYu400q0mGtBqb5lXRq,220746,12,1,spotify:track:7kYCYu400q0mGtBqb5lXRq,From Rats To Riches,1978-04-04
+185,Desire (Please Don't Turn Away),The J. Geils Band,https://open.spotify.com/track/0mWofEfE3jJbSLWCAiBh8p,217880,14,8,spotify:track:0mWofEfE3jJbSLWCAiBh8p,Love Stinks,1980
+186,What I Like About You,The Romantics,https://open.spotify.com/track/6NdcSEhpGGAYXNnnhGS2s6,175400,67,1,spotify:track:6NdcSEhpGGAYXNnnhGS2s6,What I Like About You (And Other Romantic Hits),1990
+187,That Smell,Lynyrd Skynyrd,https://open.spotify.com/track/52DKGPMQ21DauCR19pQ0BK,348240,60,2,spotify:track:52DKGPMQ21DauCR19pQ0BK,Street Survivors,1977-10-17
+188,The Purple Speed Queen,Curved Air,https://open.spotify.com/track/2AxjUfxGMkFb5TthWyHboJ,207652,10,8,spotify:track:2AxjUfxGMkFb5TthWyHboJ,The Best of Curved Air,1976-11-22
+189,Elstree,The Buggles,https://open.spotify.com/track/5nvLGQApZ2ly9Ngn0BKbeW,271600,24,6,spotify:track:5nvLGQApZ2ly9Ngn0BKbeW,The Age Of Plastic,1980-01-10
+190,The Dean And I,10cc,https://open.spotify.com/track/4CH6ZxpsBtctgxmHy10T6q,187106,32,4,spotify:track:4CH6ZxpsBtctgxmHy10T6q,10cc,1973
+191,Maid In Heaven - 2019 Remaster,Be Bop Deluxe,https://open.spotify.com/track/2Iw5EtH0fpF7r5QX5zA94F,146173,26,3,spotify:track:2Iw5EtH0fpF7r5QX5zA94F,Futurama (Remastered & Expanded),1975-05-17
+192,Angels,Lene Lovich,https://open.spotify.com/track/62yB0rvilEnpxQYjaxwqGk,188733,13,3,spotify:track:62yB0rvilEnpxQYjaxwqGk,Flex,2007-01-02
+193,Comfortably Numb,Pink Floyd,https://open.spotify.com/track/5HNCy40Ni5BZJFw1TKzRsC,382296,74,6,spotify:track:5HNCy40Ni5BZJFw1TKzRsC,The Wall,1979-11-30
+194,Birdman Of Alcatraz,Rick Wakeman,https://open.spotify.com/track/52GZ07NCP75fm7KgkzUFWp,253973,16,4,spotify:track:52GZ07NCP75fm7KgkzUFWp,Criminal Record,1977-01-01
+195,Do It Again,Steely Dan,https://open.spotify.com/track/2BstRQGodshjGpeDGQiNgo,356733,70,1,spotify:track:2BstRQGodshjGpeDGQiNgo,Can't Buy A Thrill,1972-01-01
+196,Just Can't Wait,The J. Geils Band,https://open.spotify.com/track/0VYOEbCV2NaUZ3bQuJ6HDy,205293,32,1,spotify:track:0VYOEbCV2NaUZ3bQuJ6HDy,Love Stinks,1980
+197,Stop Your Sobbing,Pretenders,https://open.spotify.com/track/2VDwggNBGtC7rbRWWfyrqe,158640,0,18,spotify:track:2VDwggNBGtC7rbRWWfyrqe,Soft Rock Alternative,2020-07-31
+198,The Logical Song - Remastered 2010,Supertramp,https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ,251253,73,2,spotify:track:6mHOcVtsHLMuesJkswc0GZ,Breakfast In America (Deluxe Edition),1979-03-29
+199,Airport,The Motors,https://open.spotify.com/track/6F0CQMioZrqgkp3oHx4hpY,278933,46,1,spotify:track:6F0CQMioZrqgkp3oHx4hpY,Approved By The Motors,1978-01-01
+200,Nothing a Little Love Won't Cure,The Rubinoos,https://open.spotify.com/track/40zclTmadNFa31fHmuzboA,163000,4,7,spotify:track:40zclTmadNFa31fHmuzboA,The Rubinoos,1977-01-01
+201,High School History,Cindy Bullens,https://open.spotify.com/track/4pkyy6I8AT5kmThL6Lr9J1,255620,1,5,spotify:track:4pkyy6I8AT5kmThL6Lr9J1,Desire Wire,1978-08-01
+202,You Make Loving Fun - 2004 Remaster,Fleetwood Mac,https://open.spotify.com/track/55mQhobuwtY7lfLAXylg1k,216626,61,8,spotify:track:55mQhobuwtY7lfLAXylg1k,Rumours (Super Deluxe),1977-02-04
+203,I Played the Fool - 2016 Remaster,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/2jGFLCf5NeOMTXkHeiu03i,202160,19,3,spotify:track:2jGFLCf5NeOMTXkHeiu03i,Hearts of Stone (Remastered),1978-01-01
+204,Jean Cocteau - 2019 Remaster,Be Bop Deluxe,https://open.spotify.com/track/5ts1ri8zRo52zT1iXpL4ZZ,172893,10,7,spotify:track:5ts1ri8zRo52zT1iXpL4ZZ,Futurama (Remastered & Expanded),1975-05-17
+205,Love of the Common Man,Todd Rundgren,https://open.spotify.com/track/2DcPccXuyphsJ7fC955j5x,219360,22,9,spotify:track:2DcPccXuyphsJ7fC955j5x,The Very Best of Todd Rundgren,1997-07-29
+206,Crime Wave,Prism,,,,,,,
+207,Garden of Man,Grace Slick,https://open.spotify.com/track/5z8BVQDFRMELNZKv6WpY9O,393066,11,9,spotify:track:5z8BVQDFRMELNZKv6WpY9O,Dreams,1980-03-18
+208,Rosalita (Come Out Tonight),Bruce Springsteen,https://open.spotify.com/track/4Z80C8NlDd1AO4axf1O3n0,420840,54,6,spotify:track:4Z80C8NlDd1AO4axf1O3n0,"The Wild, the Innocent & The E Street Shuffle",1973-09-11
+209,Dance the Night Away - 2015 Remaster,Van Halen,https://open.spotify.com/track/4RS9PmtHQe7I0o5fEeweOY,188083,60,2,spotify:track:4RS9PmtHQe7I0o5fEeweOY,Van Halen II (Remastered),1979-03-23
+210,Hold Your Fire (Remastered),Michael Stanley Band,https://open.spotify.com/track/0GtyJEbZnKeYdq2Za39au3,263000,4,9,spotify:track:0GtyJEbZnKeYdq2Za39au3,Greatest Hints (Remastered),1992
+211,Last of the New Wave Riders,Utopia,https://open.spotify.com/track/5aytDoq4pDJ06xjx6tlrT4,262400,12,6,spotify:track:5aytDoq4pDJ06xjx6tlrT4,Adventures In Utopia,1980
+212,Freedom Fighters,Utopia,https://open.spotify.com/track/0CFiz8c0doEo3UFWY8AJQn,244733,14,3,spotify:track:0CFiz8c0doEo3UFWY8AJQn,Todd Rundgren's Utopia,1974
+213,girls in action,invaders,,,,,,,
+214,Fool for the City,Foghat,https://open.spotify.com/track/2SUg1AhsYsHUz4xzNlMnBQ,271853,45,1,spotify:track:2SUg1AhsYsHUz4xzNlMnBQ,Fool for the City,1975
+215,The Only One of You,Urban Verbs,https://open.spotify.com/track/5CRS2cQPg84RAkxU52wd7e,290546,5,6,spotify:track:5CRS2cQPg84RAkxU52wd7e,Urban Verbs,1980
+216,The Plastic Age,The Buggles,https://open.spotify.com/track/5fmPJfCYIJfyWwRb8cfgYQ,308306,27,1,spotify:track:5fmPJfCYIJfyWwRb8cfgYQ,The Age Of Plastic,1980-01-10
+217,Video Killed The Radio Star,The Buggles,https://open.spotify.com/track/6t1FIJlZWTQfIZhsGjaulM,253800,64,2,spotify:track:6t1FIJlZWTQfIZhsGjaulM,The Age Of Plastic,1980-01-10
+218,Run Like Hell,Pink Floyd,https://open.spotify.com/track/0EaLRxrtnq7Mqhdf8q9txr,263573,60,9,spotify:track:0EaLRxrtnq7Mqhdf8q9txr,The Wall,1979-11-30
+219,The Vigil,Blue Öyster Cult,https://open.spotify.com/track/67HDsZrr3273j4Sv9bxFxZ,388080,31,6,spotify:track:67HDsZrr3273j4Sv9bxFxZ,Mirrors,1979
+220,Across the Border,Electric Light Orchestra,https://open.spotify.com/track/1u3hy4sFcXyAwLmD6TmEnb,233800,43,4,spotify:track:1u3hy4sFcXyAwLmD6TmEnb,Out of the Blue,1977
+221,Come Back,The J. Geils Band,https://open.spotify.com/track/4SnovfTMzsmOnAfITyPFTP,312600,36,2,spotify:track:4SnovfTMzsmOnAfITyPFTP,Love Stinks,1980
+222,Sad Songs,The Rockets,https://open.spotify.com/track/6HiJYRfb7COTBAeUvmOge7,201961,2,7,spotify:track:6HiJYRfb7COTBAeUvmOge7,No Ballads,1979
+223,11:59,Blondie,https://open.spotify.com/track/0yAi8iKRgy90VuNNZd3zhz,200864,32,7,spotify:track:0yAi8iKRgy90VuNNZd3zhz,Parallel Lines,1978-09-23
+224,My Clone Sleeps Alone,Pat Benatar,https://open.spotify.com/track/05XisbzzpAlfISLZHZAVdZ,215906,24,5,spotify:track:05XisbzzpAlfISLZHZAVdZ,In The Heat Of The Night,1979-01-01
+225,Stay Awhile,Rachel Sweet,https://open.spotify.com/track/6latcWpAyrlTwhs2RHsYls,186040,5,5,spotify:track:6latcWpAyrlTwhs2RHsYls,Fool Around,1978-10-06
+226,Forget About You,The Motors,https://open.spotify.com/track/44st0VUm4EZiJZURriALxo,172826,29,3,spotify:track:44st0VUm4EZiJZURriALxo,Approved By The Motors,1978-01-01
+227,"Sing It, Shout It",Starz,https://open.spotify.com/track/6SdveBDFBgKRRtgpWwee1W,313506,15,3,spotify:track:6SdveBDFBgKRRtgpWwee1W,Violation (Expanded Edition),1977-05-01
+228,Night Moves,Bob Seger,https://open.spotify.com/track/6UBjSnyP1O5W5ndJoO9vUk,324422,71,2,spotify:track:6UBjSnyP1O5W5ndJoO9vUk,Night Moves,1976-10-22
+229,Miss America,Styx,https://open.spotify.com/track/2UpMxlf6h57UsAU77G172s,302160,40,5,spotify:track:2UpMxlf6h57UsAU77G172s,The Grand Illusion,1977-01-01
+230,Powderfinger - 2016 Remaster,Neil Young,https://open.spotify.com/track/5F1CxsOXX6altKaKlEPuox,330480,50,6,spotify:track:5F1CxsOXX6altKaKlEPuox,Rust Never Sleeps,1979-06-27
+231,A.C.D.C.,Sweet,https://open.spotify.com/track/36ezEcDyFfBC4gNVMhitzG,208160,26,4,spotify:track:36ezEcDyFfBC4gNVMhitzG,Desolation Boulevard,1974-11
+232,Sugar & Spice,Cryan' Shames,https://open.spotify.com/track/3oc2dcOFq4wCuuHhfCoyTg,148533,26,1,spotify:track:3oc2dcOFq4wCuuHhfCoyTg,Sugar & Spice (A Collection),1992-07-14
+233,When I Look In Your Eyes,The Romantics,https://open.spotify.com/track/200etNpz0AiL62lD6xzD8u,180426,29,1,spotify:track:200etNpz0AiL62lD6xzD8u,The Romantics,1980
+234,Walking On The Moon,The Police,https://open.spotify.com/track/62uLNJgVZaFiEiKV4LpoYJ,300826,64,6,spotify:track:62uLNJgVZaFiEiKV4LpoYJ,Reggatta De Blanc (Remastered 2003),1979-10-02
+235,Guests of the Nation,Horslips,https://open.spotify.com/track/2ata9dLRciV1DojXyKcFSF,212000,9,1,spotify:track:2ata9dLRciV1DojXyKcFSF,"Short Stories, Tall Tales (Bonus Tracks Version)",2011-03-11
+236,Highway to Hell,AC/DC,https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s,208400,83,1,spotify:track:2zYzyRzz6pRmhPzyfMEC8s,Highway to Hell,1979-07-27
+237,Message of Love,Pretenders,https://open.spotify.com/track/08xxP1zt8BaXwWr545EuHG,205573,37,7,spotify:track:08xxP1zt8BaXwWr545EuHG,The Singles,1987
+238,Space Invader - 2006 Remaster,Pretenders,https://open.spotify.com/track/5DowQfDc9HNQsEqBsjIEOR,206253,30,5,spotify:track:5DowQfDc9HNQsEqBsjIEOR,Pretenders,1980-01-11
+239,Man On The Silver Mountain,Rainbow,https://open.spotify.com/track/52bzQkgk8TznulGvKOPQTK,277226,59,1,spotify:track:52bzQkgk8TznulGvKOPQTK,Ritchie Blackmore's Rainbow,1975-01-01
+240,Johnny On The Monorail,The Buggles,https://open.spotify.com/track/6GfK1g6X14jAR5ZTpelBJi,326472,19,8,spotify:track:6GfK1g6X14jAR5ZTpelBJi,The Age Of Plastic,1980-01-10
+241,Wheel in the Sky,Journey,https://open.spotify.com/track/215wUTQQUo2PElJFEFoB0d,252240,63,6,spotify:track:215wUTQQUo2PElJFEFoB0d,Infinity,1978
+242,Eleventh Earl of Mar,Genesis,https://open.spotify.com/track/68XW0RSoGt3TWxPiwhwzs6,464306,26,1,spotify:track:68XW0RSoGt3TWxPiwhwzs6,Wind & Wuthering,1976-12-27
+243,Takin' You Down,The J. Geils Band,https://open.spotify.com/track/3jB4QwXDuF4K88L2ZmBo1c,245920,16,3,spotify:track:3jB4QwXDuF4K88L2ZmBo1c,Love Stinks,1980
+244,Games People Play,The Spinners,https://open.spotify.com/track/53R01ylELwpQO5TBZdqKsM,284133,43,7,spotify:track:53R01ylELwpQO5TBZdqKsM,Pick of the Litter,1975
+245,Jane,Jefferson Starship,https://open.spotify.com/track/2RNd6VgxG19db0zs0M1C4Z,252200,63,1,spotify:track:2RNd6VgxG19db0zs0M1C4Z,Freedom At Point Zero,1979-11-01
+246,Girl's Talk,Linda Ronstadt,https://open.spotify.com/track/5odTKsQUY4a7TrYeZBB0Ig,200760,19,9,spotify:track:5odTKsQUY4a7TrYeZBB0Ig,Mad Love,1980
+247,I Love You (Miss Robot),The Buggles,https://open.spotify.com/track/2qjsM7JuIL9b2qDNcWZK16,299373,21,4,spotify:track:2qjsM7JuIL9b2qDNcWZK16,The Age Of Plastic,1980-01-10
+248,Talk To Me,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/56c5t4CXg54TjmiGR6ptfL,237866,33,3,spotify:track:56c5t4CXg54TjmiGR6ptfL,Havin' A Party With Southside Johnny,1976
+249,Be My Baby,The Ronettes,https://open.spotify.com/track/2G2YzndIA6jeWFPBXhUjh5,160906,71,2,spotify:track:2G2YzndIA6jeWFPBXhUjh5,Be My Baby: The Very Best of The Ronettes,2011-02-22
+250,The Power and the Glory,Horslips,https://open.spotify.com/track/2PWeg8K7qGnt340yoDo7vH,236600,16,4,spotify:track:2PWeg8K7qGnt340yoDo7vH,The Book of Invasions (Bonus Tracks Version),2009-08-14
+251,And the Cradle Will Rock... - 2015 Remaster,Van Halen,https://open.spotify.com/track/4MM0jT9z9m7VFiusFrGJ8C,213150,49,1,spotify:track:4MM0jT9z9m7VFiusFrGJ8C,Women and Children First (Remastered),1980-03-26
+252,Sidewalk Cafe - 2015 Remaster,Todd Rundgren,https://open.spotify.com/track/0QtGE05BId1adMxjxWetT8,135480,12,12,spotify:track:0QtGE05BId1adMxjxWetT8,Todd,1974
+253,Kid,Pretenders,https://open.spotify.com/track/7GDWFVbILOgSzE5w12XTnc,184506,0,15,spotify:track:7GDWFVbILOgSzE5w12XTnc,Original New Wave,2020-07-31
+254,Do You Remember Rock and Roll Radio?,Ramones,https://open.spotify.com/track/6hGMlZMkzZ2pvKB0P9UDaf,231440,23,3,spotify:track:6hGMlZMkzZ2pvKB0P9UDaf,Mania,1988-05-31
+255,Kid Dynamo,The Buggles,https://open.spotify.com/track/7FYkWbEQ81Axs3sxpXM5hg,210693,23,3,spotify:track:7FYkWbEQ81Axs3sxpXM5hg,The Age Of Plastic,1980-01-10
+256,(I Live For) Cars and Girls,The Dictators,https://open.spotify.com/track/0OIclmUecLQo5hyHhhLcFF,237440,30,9,spotify:track:0OIclmUecLQo5hyHhhLcFF,Go Girl Crazy!,1975-03-29
+257,Bounty Hunter,Molly Hatchet,https://open.spotify.com/track/50d2zWUEVp9jn0EphgvdWe,177600,43,1,spotify:track:50d2zWUEVp9jn0EphgvdWe,Molly Hatchet,1978
+258,Badge,Cream,https://open.spotify.com/track/08xsXR637CEqbxJmpFcuSA,164706,52,4,spotify:track:08xsXR637CEqbxJmpFcuSA,Goodbye,1969-03-01
+259,Fire (Santa Dog),The Residents,https://open.spotify.com/track/4FadjoEqtHpte2vaYhLCTg,105453,4,1,spotify:track:4FadjoEqtHpte2vaYhLCTg,80 Aching Orphans: 45 Years Of The Residents 4cd Hardback Book Anthology Set,2017-10-13
+260,Money,The Flying Lizards,https://open.spotify.com/track/5rgY6vN5CaEL3boucCi3CT,338186,37,6,spotify:track:5rgY6vN5CaEL3boucCi3CT,The Flying Lizards,1979
+261,Brass in Pocket - 2006 Remaster,Pretenders,https://open.spotify.com/track/1QaJWSCk3UMKLotnPCIHh1,185960,62,10,spotify:track:1QaJWSCk3UMKLotnPCIHh1,Pretenders,1980-01-11
+262,Planet Claire,The B-52's,https://open.spotify.com/track/5aC0QmgjYGG8QYgAg06nTk,277640,46,1,spotify:track:5aC0QmgjYGG8QYgAg06nTk,The B-52's,1979-07-11
+263,The Vanilla Queen,Golden Earring,https://open.spotify.com/track/5cpKDL7ArW8F2JtUk0wuQM,556293,29,6,spotify:track:5cpKDL7ArW8F2JtUk0wuQM,Moontan,1973
+264,in love i wanna be,Michalski & Oosterveen,,,,,,,
+265,Orgasm Addict - 2001 Remastered Version,Buzzcocks,https://open.spotify.com/track/3K6mPAaaOWaDDR0l0OjhOE,122960,40,1,spotify:track:3K6mPAaaOWaDDR0l0OjhOE,Singles Going Steady,1979
+266,Thrash,Cowboys International,https://open.spotify.com/track/1EuvkEmshTrFvQRlkQbDRv,215010,10,2,spotify:track:1EuvkEmshTrFvQRlkQbDRv,The Original Sin,1979-01-01
+267,Northern Lights,Renaissance,https://open.spotify.com/track/76GyGS1C84YBtb3qX6j5mk,247200,40,7,spotify:track:76GyGS1C84YBtb3qX6j5mk,A Song for All Seasons,1978-11-06
+268,It Takes Time,The Marshall Tucker Band,https://open.spotify.com/track/3okKVZgaeql0vACn0kwMvY,223760,28,9,spotify:track:3okKVZgaeql0vACn0kwMvY,Searchin' for a Rainbow,1975-08-01
+269,Fade Away And Radiate,Blondie,https://open.spotify.com/track/7APz1pnCEsvfMhJpnXcfl8,243984,31,4,spotify:track:7APz1pnCEsvfMhJpnXcfl8,Parallel Lines,1978-09-23
+270,"Puff, the Magic Dragon","Peter, Paul and Mary",https://open.spotify.com/track/3hqsBLMAqJqrhr434Z7WlA,206866,54,5,spotify:track:3hqsBLMAqJqrhr434Z7WlA,Moving,1963
+271,Your Very Eyes,Shoes,https://open.spotify.com/track/0MFuGwMBdNWkAnmZ1Alis7,188760,9,4,spotify:track:0MFuGwMBdNWkAnmZ1Alis7,Present Tense,1979-09-15
+272,Rescue Me,Horslips,https://open.spotify.com/track/77VZsF3DsADs4WuEdHQmdZ,203346,8,24,spotify:track:77VZsF3DsADs4WuEdHQmdZ,Treasury - The Very Best of Horslips,2009-11-13
+273,Drive the Cold Winter Away,Horslips,https://open.spotify.com/track/0XD8mVBqnyPe4qWvLewA3C,152533,0,5,spotify:track:0XD8mVBqnyPe4qWvLewA3C,Ring Christmas Bells,2013-12-13
+274,Fly By Night,Rush,https://open.spotify.com/track/54TaGh2JKs1pO9daXNXI5q,202200,57,5,spotify:track:54TaGh2JKs1pO9daXNXI5q,Fly By Night,1975-02-15
+275,Gnostic Serenade,Tom Rush,https://open.spotify.com/track/3A41kUjSU5V4hDKhvpHqVv,296106,9,10,spotify:track:3A41kUjSU5V4hDKhvpHqVv,Wrong End Of The Rainbow,1970
+276,Only You Can Rock Me - 2008 Remaster,UFO,https://open.spotify.com/track/2qzQZ23b0SXFwz812P83hn,248520,35,1,spotify:track:2qzQZ23b0SXFwz812P83hn,Obsession (2008 Remaster),1978-07-15
+277,Blitzkrieg Bop - 2016 Remaster,Ramones,https://open.spotify.com/track/4KcH1ZRV2W1q7Flq0QqC76,134466,71,1,spotify:track:4KcH1ZRV2W1q7Flq0QqC76,Ramones (40th Anniversary Deluxe Edition; 2016 Remaster),1976-04-23
+278,Beat on the Brat - 2016 Remaster,Ramones,https://open.spotify.com/track/55mKuESqpfgqe0kooIkTH2,151960,54,2,spotify:track:55mKuESqpfgqe0kooIkTH2,Ramones (40th Anniversary Deluxe Edition; 2016 Remaster),1976-04-23
+279,Rock Lobster,The B-52's,https://open.spotify.com/track/2Q5wSOwq6BDSu7sSVMNrtT,409400,59,4,spotify:track:2Q5wSOwq6BDSu7sSVMNrtT,The B-52's,1979-07-11
+280,New Values,Iggy Pop,https://open.spotify.com/track/5LmqBIugWpgE9OA8jFk4i3,160000,22,2,spotify:track:5LmqBIugWpgE9OA8jFk4i3,New Values,1979-09-01
+281,Wake Up And Make Love With Me,Ian Dury,https://open.spotify.com/track/5Du4gwoQvVIPJU73sM2smL,264693,43,1,spotify:track:5Du4gwoQvVIPJU73sM2smL,New Boots and Panties!!,1977-09-30
+282,Cruel To Be Kind,Ian Gomm,https://open.spotify.com/track/39nkXj5MMwcyfVRJjXCOFA,192400,0,2,spotify:track:39nkXj5MMwcyfVRJjXCOFA,Crazy For You,1996-01-01
+283,52 Girls,The B-52's,https://open.spotify.com/track/0hV8cbzJubHKLSFIsBnYUo,216333,42,2,spotify:track:0hV8cbzJubHKLSFIsBnYUo,The B-52's,1979-07-11
+284,Blues Theme - From The Wild Angels,Davie Allan & The Arrows,https://open.spotify.com/track/12hAeEyERydkkb1Wow1xdA,130946,22,1,spotify:track:12hAeEyERydkkb1Wow1xdA,Wild Angels And Other Themes,1993-03-23
+285,When I Was Young,Jane Aire & The Belvederes,https://open.spotify.com/track/2YMCBVQsABudlxQGw9zSxJ,168986,2,11,spotify:track:2YMCBVQsABudlxQGw9zSxJ,"Soul Jazz Records Presents Punk 45: Burn, Rubber City, Burn - Akron, Ohio: Punk and the Decline of the Mid-West 1975-80",2015-02-10
+286,TV,The Flying Lizards,https://open.spotify.com/track/03x6BSem2COLMnJ1t4rlpl,241386,14,3,spotify:track:03x6BSem2COLMnJ1t4rlpl,The Flying Lizards,1979
+287,Don't Touch Me There,The Tubes,https://open.spotify.com/track/47khefI5yEHStaBNhu4GUb,207226,22,5,spotify:track:47khefI5yEHStaBNhu4GUb,Young And Rich,1976-01-01
+,10 Feet Tall,XTC,https://open.spotify.com/track/7EREJweyXYJsVO7mGpYV9J?si=0OuKntMtQgyDo2LG9jfivA,197000,,5,spotify:track:7EREJweyXYJsVO7mGpYV9J,Drums and Wires,1979
+289,i wanna be sedated,The Ramones,https://open.spotify.com/track/5NoQvINZLBV1wMYPdNmReL?si=F578w524TCuo6C2c2KuOlA,,,7,spotify:track:5NoQvINZLBV1wMYPdNmReL,Road to Ruin,1978
+290,revolt into style,bill nelson,,,,,,,
+291,Too Late,Shoes,https://open.spotify.com/track/4ExfBQfuuU0v07p428cmLD,163666,19,5,spotify:track:4ExfBQfuuU0v07p428cmLD,35 Years: The Definitive Shoes Collection 1977-2012,2012
+292,Jungle Love,Steve Miller Band,https://open.spotify.com/track/1EuqRlDP9RuzeCRVcjr1PY,187600,55,7,spotify:track:1EuqRlDP9RuzeCRVcjr1PY,Book Of Dreams,1977-01-01
+293,Can't You See,The Marshall Tucker Band,https://open.spotify.com/track/4AlgqXQ5QA5bsNa6Nmchz7?si=3I64Slx_TVSCqsp_9vfHvA,,,,spotify:track:4AlgqXQ5QA5bsNa6Nmchz7,,
+294,Melissa,The Allman Brothers Band,https://open.spotify.com/track/30St98Bok3jJmXdkkHVPQe,235223,63,3,spotify:track:30St98Bok3jJmXdkkHVPQe,Eat A Peach,1972-02-12
+295,Suffragette City - 2012 Remaster,David Bowie,https://open.spotify.com/track/3YZa4IzxK2UtEKTvdTgsi8,208413,59,10,spotify:track:3YZa4IzxK2UtEKTvdTgsi8,The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster),1972-06-06
+296,Take It Inside - 2016 Remaster,Southside Johnny And The Asbury Jukes,https://open.spotify.com/track/5v2Qtw3EThbJJGPSF8J5U4,195080,15,5,spotify:track:5v2Qtw3EThbJJGPSF8J5U4,Hearts of Stone (Remastered),1978-01-01
+297,Roll Away the Stone,Mott The Hoople,https://open.spotify.com/track/7cQXdm6y9KE8n1Lw2z75Ey,188973,42,9,spotify:track:7cQXdm6y9KE8n1Lw2z75Ey,The Hoople,1974
+298,Something About You,Boston,https://open.spotify.com/track/1KxNmUInjFsoDFrLaTtpLZ,227906,49,7,spotify:track:1KxNmUInjFsoDFrLaTtpLZ,Boston,1976
+299,Hot Patootie (Bless My Soul),The Rocky Horror Show Original Cast,https://open.spotify.com/track/6Ga584DDPJ4GNo6EgiDYkw,126253,14,8,spotify:track:6Ga584DDPJ4GNo6EgiDYkw,Let's Do The Time Warp Again!,2006-11-27
+300,The Phone,The Records,,,,,,The Records,1979
+301,The Wall Street Shuffle,10cc,https://open.spotify.com/track/3HyZGwZAq9oQJQBzSyjs7Q,241572,46,19,spotify:track:3HyZGwZAq9oQJQBzSyjs7Q,The Complete UK Recordings,2004-01-01
+302,Here Comes My Girl,Tom Petty and the Heartbreakers,https://open.spotify.com/track/685sEpLJe80Zzuxz3siOVT,264453,55,2,spotify:track:685sEpLJe80Zzuxz3siOVT,Damn The Torpedoes (Deluxe Edition),1979-10-19
+303,I Like To Rock,April Wine,https://open.spotify.com/track/17sn00z8VEiRJuW6eJrlSq,262826,43,1,spotify:track:17sn00z8VEiRJuW6eJrlSq,Harder . . . Faster,1979-01-01
+304,The Spirit Of Radio,Rush,https://open.spotify.com/track/4e9hUiLsN4mx61ARosFi7p,296466,64,1,spotify:track:4e9hUiLsN4mx61ARosFi7p,Permanent Waves,1980-01-01
+305,Things I Never Say,The Headboys,https://open.spotify.com/track/7emFHLsEtgZtf8TB9FKpQj,213893,1,4,spotify:track:7emFHLsEtgZtf8TB9FKpQj,The Lost Album,2013-12-01
+306,Roxanne,The Police,https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo,191946,77,3,spotify:track:3EYOJ48Et32uATr9ZmLnAo,Outlandos D'Amour (Remastered 2003),1978-11-02
+307,Young Lust,Pink Floyd,https://open.spotify.com/track/3xGJuHvSxFJxxYlHj5BIoT,209956,62,9,spotify:track:3xGJuHvSxFJxxYlHj5BIoT,The Wall,1979-11-30
+308,"Theme From ""The Warriors"" - From ""The Warriors"" Soundtrack",Barry Vorzon,https://open.spotify.com/track/3DRcy1faUJgUNk0eNs7GKU,237866,40,1,spotify:track:3DRcy1faUJgUNk0eNs7GKU,The Warriors Original Motion Picture Soundtrack,2005-01-01
+309,Still...You Turn Me On - 2014 Remastered Version,"Emerson, Lake & Palmer",https://open.spotify.com/track/5RhGCgIZpVn4yP3ixrcjff,172359,38,21,spotify:track:5RhGCgIZpVn4yP3ixrcjff,The Anthology,2016-07-29
+310,Suite Madame Blue,Styx,https://open.spotify.com/track/0RTNuBiDbHMCuUvt4FK4hR,391720,38,13,spotify:track:0RTNuBiDbHMCuUvt4FK4hR,Greatest Hits,1995-01-01
+311,Cathedral,"Crosby, Stills & Nash",https://open.spotify.com/track/5cWLZF2W2aMvvnMrA296TS,317626,38,18,spotify:track:5cWLZF2W2aMvvnMrA296TS,Greatest Hits,2005-03-14
+312,Classical Gas,Mason Williams,https://open.spotify.com/track/48oT10cTda4pZUlYfqxlPR,184066,44,1,spotify:track:48oT10cTda4pZUlYfqxlPR,Rhino Hi-Five: Mason Williams,2005-10-18
+313,Build Me Up Buttercup,The Foundations,https://open.spotify.com/track/6sPOmDulFtLzfX25zICNrC,177533,74,7,spotify:track:6sPOmDulFtLzfX25zICNrC,The Foundations,1968-01-01
+314,Every Time I Think of You,The Babys,https://open.spotify.com/track/76fFzThA0KjAea2BdVlHnD,239160,49,2,spotify:track:76fFzThA0KjAea2BdVlHnD,Head First,1978-01-01
+315,Hello It's Me,Todd Rundgren,https://open.spotify.com/track/3gHFKiDanj4d2rqgHlRFFc,264093,56,22,spotify:track:3gHFKiDanj4d2rqgHlRFFc,Something / Anything?,1972
+316,you're like the wind,prism,,,,,,,
+317,"Call Me, Tell Me",American Flyer,https://open.spotify.com/track/3vX1IATWFvN66kixEAIAT0,156093,5,11,spotify:track:3vX1IATWFvN66kixEAIAT0,American Flyer,2014-09-22
+318,Mother Of Love - Remastered,Nitty Gritty Dirt Band,https://open.spotify.com/track/6uybBsEHbwtAckrzKtwN77,166773,5,13,spotify:track:6uybBsEHbwtAckrzKtwN77,Symphonion Dream,2003-01-01
+319,Waste a Little Time On Me - Live,Michael Stanley Band,https://open.spotify.com/track/2hzZoK3DH7HMp01mXq32VZ,232133,16,8,spotify:track:2hzZoK3DH7HMp01mXq32VZ,Stagepass,1977
+320,Danny's Song,Loggins & Messina,https://open.spotify.com/track/0ju1jP0cSPJ8tmojYBEI89,254653,66,9,spotify:track:0ju1jP0cSPJ8tmojYBEI89,The Best: Loggins & Messina Sittin' In Again,1971
+321,I Think of You,Renaissance,https://open.spotify.com/track/4PvQokavVtVWMemxt1xHZA,188866,11,2,spotify:track:4PvQokavVtVWMemxt1xHZA,Turn of the Cards,1974-11-18
+322,You Keep Me Hanging On - Light Echo Remix,The Supremes,https://open.spotify.com/track/6ESGTTiBkHRiYPiIufJk97,386665,24,5,spotify:track:6ESGTTiBkHRiYPiIufJk97,Remix The Classics (Vol. 2),2016-01-29
+323,It's The Same Old Song,Four Tops,https://open.spotify.com/track/7d1ustAIlXG7ht5Q4IOv7s,166400,55,5,spotify:track:7d1ustAIlXG7ht5Q4IOv7s,Four Tops Second Album,1965
+324,I Just Can't Help It,The Korgis,https://open.spotify.com/track/5Y7MFcKfExDrXTMQN85vvR,224400,2,12,spotify:track:5Y7MFcKfExDrXTMQN85vvR,...by Appointment,2015-01-12
+325,Thunder Road,Bruce Springsteen,https://open.spotify.com/track/56lhDZNQ5J47aog6mGKeGk,288720,67,1,spotify:track:56lhDZNQ5J47aog6mGKeGk,Born To Run,1975-08-25
+326,Third Time Lucky (First Time I Was A Fool),Foghat,https://open.spotify.com/track/2GrXeR0yhjkyXTp0alMF2u,252640,28,2,spotify:track:2GrXeR0yhjkyXTp0alMF2u,Boogie Motel,1979
+327,Sleepin' with the TV On,The Dictators,https://open.spotify.com/track/73Ux9DEm9uasE7mDwJREeX,256866,10,3,spotify:track:73Ux9DEm9uasE7mDwJREeX,Manifest Destiny,1977
+328,Like a Hurricane - 2017 Remaster,Crazy Horse,https://open.spotify.com/track/1n6gDSllAqVSweuFD82hNH,497493,55,31,spotify:track:1n6gDSllAqVSweuFD82hNH,Decade,1977
+329,"hey hey, my my (into the black)",neil young,https://open.spotify.com/track/75hAZIgjHSiQIPjBACSFMm?si=LL9RxU_HSsyRmxAu9dzOBA,,,,spotify:track:75hAZIgjHSiQIPjBACSFMm,Live Rust,1979
+330,Camellia,Daryl Hall & John Oates,https://open.spotify.com/track/1vEMEm5lvpm40P0vzyTNrz,166266,26,1,spotify:track:1vEMEm5lvpm40P0vzyTNrz,Daryl Hall & John Oates,1975
+331,Don't Hang Up,10cc,https://open.spotify.com/track/12MO0L4juj6Lc8ZVTYx0yI,376400,27,9,spotify:track:12MO0L4juj6Lc8ZVTYx0yI,How Dare You,1976
+332,If I Had You,The Korgis,https://open.spotify.com/track/5O2GICONw7vuzpjhB35niy,238440,35,1,spotify:track:5O2GICONw7vuzpjhB35niy,The Korgis Kollection,1978
+333,Black Flame - 2020 Remaster,Renaissance,https://open.spotify.com/track/6fwTbnT96R7vOfC6oaMwRY,386893,11,4,spotify:track:6fwTbnT96R7vOfC6oaMwRY,Turn of the Cards (Expanded & Remastered),1974-04-30
+334,Saucy Sailor - 2009 Remaster,Steeleye Span,https://open.spotify.com/track/0FTlmN2tsu9jYX79dkVf3V,352066,26,9,spotify:track:0FTlmN2tsu9jYX79dkVf3V,Below the Salt (2009 Remaster),1972-10-14
+335,In-A-Gadda-Da-Vida - Single Version,Iron Butterfly,https://open.spotify.com/track/41TqRBgF4Ahyr4vGmZVk8b,173986,57,6,spotify:track:41TqRBgF4Ahyr4vGmZVk8b,Light and Heavy/The Best of...,1993
+336,The Ikon (Segments) [Live 1973],Todd Rundgren,https://open.spotify.com/track/1voQshCnnA1brT6ITgF4s0,563613,2,38,spotify:track:1voQshCnnA1brT6ITgF4s0,Box O' Todd (Live),2016-03-18
+337,"Hello, Hello, Hello",New England,https://open.spotify.com/track/2rPOxYsjva5XKuKM4s3Y5Y,216866,9,1,spotify:track:2rPOxYsjva5XKuKM4s3Y5Y,New England,1979-01-01
+338,Dreaming,Blondie,https://open.spotify.com/track/2Rn7bVL1FVYboc4c55RUdg,188493,42,1,spotify:track:2Rn7bVL1FVYboc4c55RUdg,Eat To The Beat,1979-09-28
+339,"My My, Hey Hey (Out of the Blue) - 2016 Remaster",Neil Young,https://open.spotify.com/track/6VltRkmJbCTqgKrTHk4Ulw,227705,68,1,spotify:track:6VltRkmJbCTqgKrTHk4Ulw,Rust Never Sleeps,1979-06-27
+340,When You Gonna Wake Up,Bob Dylan,https://open.spotify.com/track/4CiCn1uQ4g2nDcunbk2mw7,328493,30,7,spotify:track:4CiCn1uQ4g2nDcunbk2mw7,Slow Train Coming,1979-08-20
+341,Simple Visions,Strawbs,https://open.spotify.com/track/0dsNPKzJAKNoXf0hx8MRhx?si=iWlRUYWzQEqkeo9ifyxgCw,556906,0,5,spotify:track:0dsNPKzJAKNoXf0hx8MRhx,Deep Cuts,1976
+342,B.A.B.Y,Rachel Sweet,https://open.spotify.com/track/2824BVDvYh007psDXMnDYd?si=psMZYzWhSxai7mQxjY0NKA,192413,10,1,spotify:track:2824BVDvYh007psDXMnDYd,Fool Around,1978
+343,Get Ready For Love - Remastered,April Wine,https://open.spotify.com/track/5S5fKzDXqXcHZgS1ArHDll,261426,22,2,spotify:track:5S5fKzDXqXcHZgS1ArHDll,Classic Masters,2002-01-01
+344,Oh Caroline,Cheap Trick,https://open.spotify.com/track/2pe3KkzSYohFQVlHdpYDka,179440,27,6,spotify:track:2pe3KkzSYohFQVlHdpYDka,In Color,1977-09
+345,Don't Ever Wanna Lose Ya,New England,https://open.spotify.com/track/6H7FaM4ALzohhNrSFXDnJp?si=uHAhyLVoRvq7mtoCDUn5oA,340300,,,spotify:track:6H7FaM4ALzohhNrSFXDnJp,New England,
+346,If You Wanna Get To Heaven,The Ozark Mountain Daredevils,https://open.spotify.com/track/2CFtB64mDu2XCFjvGJhc9k,184466,51,3,spotify:track:2CFtB64mDu2XCFjvGJhc9k,Ozark Mountain Daredevils,1973-01-01
+347,Slow Motion,Blondie,https://open.spotify.com/track/1J8PgePsTmVm3TAuYnblw6,208977,19,8,spotify:track:1J8PgePsTmVm3TAuYnblw6,Eat To The Beat,1979-09-28
+348,Rip Her To Shreds - Remastered,Blondie,https://open.spotify.com/track/23yUwzz4CQ8yzQ65ATN6Ds,202826,39,8,spotify:track:23yUwzz4CQ8yzQ65ATN6Ds,Blondie (Remastered),1976-12-01
+349,Astronomy,Blue Öyster Cult,https://open.spotify.com/track/2g02rt0UFudctbAnmJsm22,383973,47,8,spotify:track:2g02rt0UFudctbAnmJsm22,Secret Treaties,1974-04-01
+350,Tomorrow Night,Shoes,https://open.spotify.com/track/6vFbNeAZzW0BBJBhlasr6w,177693,21,1,spotify:track:6vFbNeAZzW0BBJBhlasr6w,35 Years: The Definitive Shoes Collection 1977-2012,2012
+351,All Tomorrow's Parties,The Velvet Underground,https://open.spotify.com/track/1mL6q0gbifm2dBTvMBx4px,359680,47,6,spotify:track:1mL6q0gbifm2dBTvMBx4px,The Velvet Underground & Nico 45th Anniversary,1967-03-12
+352,Let's Dance - 2016 Remaster,Ramones,https://open.spotify.com/track/5wPUGMFkGjNQH9W3FkgkGt,111866,45,12,spotify:track:5wPUGMFkGjNQH9W3FkgkGt,Ramones (40th Anniversary Deluxe Edition; 2016 Remaster),1976-04-23
+353,All My Love - 1990 Remaster,Led Zeppelin,https://open.spotify.com/track/6lrh9jZ1xoMwoErgPSj2rY,351266,64,6,spotify:track:6lrh9jZ1xoMwoErgPSj2rY,In Through the out Door (1994 Remaster),1979-08-15
+354,Illegal Smile,John Prine,https://open.spotify.com/track/1h0R5cstHZ070tevUAfEo7,193266,50,1,spotify:track:1h0R5cstHZ070tevUAfEo7,John Prine,1971
+355,the truth comes out,desmond child and rouge,,,,,,,
+356,Real Man,Todd Rundgren,https://open.spotify.com/track/5NB6p9H8p9ylibEjlTIxSD,270440,23,8,spotify:track:5NB6p9H8p9ylibEjlTIxSD,The Very Best of Todd Rundgren,1997-07-29
+357,Your Number Or Your Name,The Knack,https://open.spotify.com/track/0LVwxuIKtNDPVviwqALLmC,177866,27,2,spotify:track:0LVwxuIKtNDPVviwqALLmC,Get The Knack,1979-01-01
+358,Insomnia,The Records,https://open.spotify.com/track/3lDDNAx5I7uxVw7GlEi0Fu,161293,2,6,spotify:track:3lDDNAx5I7uxVw7GlEi0Fu,Play Live! Evanston ILL 9/7/80,2009-11-08
+359,Before They Make Me Run - Remastered,The Rolling Stones,https://open.spotify.com/track/4cAlWy0jWMtn5AdtZy4dHi,204960,41,8,spotify:track:4cAlWy0jWMtn5AdtZy4dHi,Some Girls,1978-06-09
+360,"Pop Muzik - Nik Launay '79 12""",M,https://open.spotify.com/track/0FBeVAGy58YREuZK2rpRVm,296466,50,1,spotify:track:0FBeVAGy58YREuZK2rpRVm,"New York, London, Paris, Munich",1979-01-01
+361,Give Me An Inch,Robert Palmer,https://open.spotify.com/track/6c9DEGj7hB56QhSxhYmRpH,198106,25,1,spotify:track:6c9DEGj7hB56QhSxhYmRpH,Pressure Drop,1975-01-01
+362,Fire,The Pointer Sisters,https://open.spotify.com/track/65lHwG8JFJs67PnOUhCYPq,210640,57,7,spotify:track:65lHwG8JFJs67PnOUhCYPq,Energy (Expanded Edition),1978
+363,Atlanta June,Pablo Cruise,https://open.spotify.com/track/4XhEyr2qbZWSvgmlKG7Rp6,242200,18,8,spotify:track:4XhEyr2qbZWSvgmlKG7Rp6,20th Century Masters: The Millennium Collection: Best of Pablo Cruise,2001-01-01
+364,The Vultures Fly High,Renaissance,https://open.spotify.com/track/5X8GKUraZnZjtbTrnE5fi8,187453,13,2,spotify:track:5X8GKUraZnZjtbTrnE5fi8,Scheherazade and Other Stories,1975
+365,Driver's Seat,Sniff 'n' The Tears,https://open.spotify.com/track/6mYxkv8dzrRzno1AwtZWZl,241733,49,1,spotify:track:6mYxkv8dzrRzno1AwtZWZl,The Best of Sniff 'n' the Tears,1999-01-01
+366,Pin A Medal On Mary,Rachel Sweet,https://open.spotify.com/track/2f5gGWUbCIYcnAbjtXr6Wr,190666,4,11,spotify:track:2f5gGWUbCIYcnAbjtXr6Wr,Fool Around,1978-10-06
+367,Girls That Don't Exist,The Records,https://open.spotify.com/track/5yQT8pcWnK9VrkxxFgDdK5,220933,10,6,spotify:track:5yQT8pcWnK9VrkxxFgDdK5,"Smashes, Crashes And Near Misses",1988-01-01
+368,Let Me In,Rick Derringer,https://open.spotify.com/track/4YPlR0R5VmhZ0Dtnf6Yh6m,210293,8,1,spotify:track:4YPlR0R5VmhZ0Dtnf6Yh6m,Derringer (Bonus Track),1976-02-01
+369,Boom Boom (Out Go The Lights) - Live,Pat Travers Band,https://open.spotify.com/track/0SHdSdMOxZqzMWZyBrjcQM,305713,37,4,spotify:track:0SHdSdMOxZqzMWZyBrjcQM,Pat Travers Band...Live! Go For What You Know,1979-01-01
+370,Mess With Love,The Rumor,,,,,,,
+371,Discovering Japan,Graham Parker & The Rumour,https://open.spotify.com/track/3EDiesXhJp7u7HOAxGQG50,208280,16,1,spotify:track:3EDiesXhJp7u7HOAxGQG50,Squeezing Out Sparks,1979-01-01
+372,Bastille Day,Rush,https://open.spotify.com/track/2fsFnXtYfu3xkz9QXj1pZs,277133,44,1,spotify:track:2fsFnXtYfu3xkz9QXj1pZs,Caress Of Steel,1975-09-24
+373,Drivin' Wheel,Foghat,https://open.spotify.com/track/6hTu88ZuTc8Tybv0yBP5z4,313800,14,12,spotify:track:6hTu88ZuTc8Tybv0yBP5z4,Blues & Rock,2020-07-31
+374,Destruction,FM,https://open.spotify.com/track/25O6MSJ22sePqWodaq4v9y,356613,2,9,spotify:track:25O6MSJ22sePqWodaq4v9y,Surveillance,2013-04-29
+375,Candy's Going Bad,The Godz,https://open.spotify.com/track/4SjyAkih3FK3tbTW9snQwG,641293,12,7,spotify:track:4SjyAkih3FK3tbTW9snQwG,The Godz,1978
+376,White Russia,Nitty Gritty Dirt Band,https://open.spotify.com/track/7gwEi8hZqVG0ffKtwx1OQI,171800,5,7,spotify:track:7gwEi8hZqVG0ffKtwx1OQI,Dirt Band,1978-01-01
+377,Boogie 'Til You Puke,Root Boy Slim & The Sex Change Band,https://open.spotify.com/track/1TWjJ7TmAn2o0QGgtl5dnf,209893,9,1,spotify:track:1TWjJ7TmAn2o0QGgtl5dnf,Root Boy Slim & The Sex Change Band,1978
+378,Jerkin' Crocus,Mott The Hoople,https://open.spotify.com/track/1xKF80cHD0H6VydMJqK4st,240800,22,5,spotify:track:1xKF80cHD0H6VydMJqK4st,All The Young Dudes (Expanded Edition),1972
+379,Under My Wheels,Alice Cooper,https://open.spotify.com/track/6TPMFSJFmyIohTM5El90Po,171560,50,1,spotify:track:6TPMFSJFmyIohTM5El90Po,Killer,1971
+380,Some Other Time,The Alan Parsons Project,https://open.spotify.com/track/6YiSW7FjJw36A3pZ7LzMiV,245666,43,3,spotify:track:6YiSW7FjJw36A3pZ7LzMiV,I Robot (Legacy Edition),1977-06-01
+381,Time Bomb,Lake,https://open.spotify.com/track/7yo32JF04IdMMoj6kMIa2U,196560,17,3,spotify:track:7yo32JF04IdMMoj6kMIa2U,Lake,1976
+382,Hide In Your Shell - Remastered,Supertramp,https://open.spotify.com/track/0ldE7rHWykc9OUViCzdviV,409889,51,3,spotify:track:0ldE7rHWykc9OUViCzdviV,Crime Of The Century (Deluxe),1974-09-01
+383,So Afraid - Digitally Remastered 2001,The Outlaws,https://open.spotify.com/track/2kBJJ4kdTdnPh5XtlithOD,196200,15,3,spotify:track:2kBJJ4kdTdnPh5XtlithOD,Hurry Sundown,1977
+384,I Go To Pieces,Rachel Sweet,https://open.spotify.com/track/7qeWKOyXcqggQpyUWtYaPC,165506,10,2,spotify:track:7qeWKOyXcqggQpyUWtYaPC,Fool Around,1978-10-06
+385,Lady Writer,Dire Straits,https://open.spotify.com/track/3mwFncaI2HBczQ92GP9MQF,229026,45,5,spotify:track:3mwFncaI2HBczQ92GP9MQF,Communiqué,1979-06-15
+386,Karen,The Euclid Beach Band,https://open.spotify.com/track/1nwWxcRWkp6fnK4QlI0lvU,232133,2,3,spotify:track:1nwWxcRWkp6fnK4QlI0lvU,Euclid Beach Band,1979-11-05
+387,I've Never Been in Love,Suzi Quatro,https://open.spotify.com/track/67RJNtbJ5YMOMOM9kfhhGM,181880,23,16,spotify:track:67RJNtbJ5YMOMOM9kfhhGM,The Wild One: The Greatest Hits,1990-05-08
+388,Desperado - 2013 Remaster,Eagles,https://open.spotify.com/track/2TjnCxxQRYn56Ye8gkUKiW,213712,67,5,spotify:track:2TjnCxxQRYn56Ye8gkUKiW,Desperado (2013 Remaster),1973
+389,Down to the Wire (Remastered),Michael Stanley Band,https://open.spotify.com/track/2NauRe2h4twS4dA5Re0yfe,250520,4,4,spotify:track:2NauRe2h4twS4dA5Re0yfe,Greatest Hints (Remastered),1992
+390,"Starship Trooper: a. Life Seeker, b. Disillusion, c. Würm",Yes,https://open.spotify.com/track/1K75F5lMyhGFqbM8HwWSpS,566133,50,3,spotify:track:1K75F5lMyhGFqbM8HwWSpS,The Yes Album (Deluxe Edition),1971-02-19
+391,Born to Run,Bruce Springsteen,https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s,269920,74,5,spotify:track:6hTcuIQa0sxrrByu9wTD7s,Born To Run,1975-08-25
+392,When the Machines Rock,Gary Numan / Tubeway Army,https://open.spotify.com/track/2eDrWAh5GXIDWhKIGedgMc,195333,14,9,spotify:track:2eDrWAh5GXIDWhKIGedgMc,Replicas Redux,1979
+393,All Mixed Up,The Cars,https://open.spotify.com/track/35jXTF1ALlzkrS2k1B5dkF,257826,42,9,spotify:track:35jXTF1ALlzkrS2k1B5dkF,The Cars,1978-06-06
+394,For Your Love - 2018 Remaster,Fleetwood Mac,https://open.spotify.com/track/0m8FPvtqX1SkWp2hgiXD8v,226840,35,24,spotify:track:0m8FPvtqX1SkWp2hgiXD8v,50 Years - Don't Stop,2018-11-16
+395,(Ain't Nothin' but A) House Party,The J. Geils Band,https://open.spotify.com/track/460CrLDOX6lopMGzb60GMr,280733,31,4,spotify:track:460CrLDOX6lopMGzb60GMr,Best Of The J. Geils Band,1979-06-05
+396,Killer Cut,Charlie,https://open.spotify.com/track/5doSujt2ivzuGZAan5tLTn,369866,10,1,spotify:track:5doSujt2ivzuGZAan5tLTn,Fight Dirty,1979
+397,Iron Man - 2014 Remaster,Black Sabbath,https://open.spotify.com/track/3IOQZRcEkplCXg6LofKqE9,355303,66,4,spotify:track:3IOQZRcEkplCXg6LofKqE9,Paranoid (2014 Remaster),1970-09-18
+398,Dazed and Confused - 1990 Remaster,Led Zeppelin,https://open.spotify.com/track/6hu1f1cXSw7OAqhpSQ2zDy,386373,63,4,spotify:track:6hu1f1cXSw7OAqhpSQ2zDy,Led Zeppelin,1969-01-12
+399,Metamorphosis - Remastered,Curved Air,https://open.spotify.com/track/5eRsy4XkHPsBnYo8Ni7QC5,640293,5,3,spotify:track:5eRsy4XkHPsBnYo8Ni7QC5,Air Cut: Newly Remastered Official Edition,2018-06-20
+400,Hold On,Ian Gomm,https://open.spotify.com/track/5IjKLh01upJs2TcQnP7oCV,184053,38,5,spotify:track:5IjKLh01upJs2TcQnP7oCV,Summer Holiday,1978
+401,Rock And Roll Love Letter,The Records,https://open.spotify.com/track/09jRCwaQLFg9GoMYN6jS7r,217773,8,20,spotify:track:09jRCwaQLFg9GoMYN6jS7r,"Smashes, Crashes And Near Misses",1988-01-01

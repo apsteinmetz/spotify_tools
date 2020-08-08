@@ -39,12 +39,18 @@ spot_playlist <- create_playlist(user_id = get_my_profile()$id,
                                 name = playlist_name,
                                 description = playlist_desc)
 
-spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks[51:100])
 
-for (n in 1:100){
-   spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks[n])
-   
+
+available_tracks <- playlist %>% 
+   filter(!is.na(track.uri)) %>% 
+   pull(track.uri)
+
+# load 100 tracks at a time to playlist
+cuts <- cut_width(1:length(available_tracks),100,labels=FALSE)
+for (n in 1:max(cuts)){
+   spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks[which(cuts==n)])
 }
+
 # ----------------------------------------------------------------------
 # make text for facebook post and copy to clipboard
 spot_playlist$external_urls$spotify
