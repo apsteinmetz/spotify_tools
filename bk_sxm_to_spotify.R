@@ -5,7 +5,7 @@ library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-08-01"
+play_date <- "2020-09-05"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
