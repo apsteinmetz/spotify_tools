@@ -5,7 +5,7 @@ library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-10-17"
+play_date <- "2020-10-24"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -41,10 +41,10 @@ raw_playlist <- read_delim(song_file,delim='\"',
 print("Getting Track URIs")
 
 
+playlist <- raw_playlist
 uri_list <- fuzzy_search_spotify(playlist$artist,
                                  playlist$song,
                                  progress = TRUE)
-playlist <- raw_playlist
 playlist <- bind_cols(playlist,uri_list) %>% select(song,spot_track,everything())
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
