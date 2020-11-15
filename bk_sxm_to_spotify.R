@@ -5,7 +5,7 @@ library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-10-31"
+play_date <- "2020-11-14"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -47,6 +47,14 @@ uri_list <- fuzzy_search_spotify(playlist$artist,
                                  progress = TRUE)
 playlist <- bind_cols(playlist,uri_list) %>% select(song,spot_track,everything())
 
+# manually remove false positives by row number
+# this is needed because my validation for correct song is lousy
+clear_false_postive <- function(playlist,rownum){
+   playlist[rownum,] <-playlist[rownum,] %>% 
+      mutate(across(colnames,function(x)x<-NA))
+   return(playlist)
+}
+
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
 missing_tracks <- playlist %>% filter(is.na(track_uri)) %>% 
    mutate(a_s = paste0(artist,", ",song))
@@ -55,6 +63,7 @@ missing_tracks %>% select(a_s) %>% print(n=25)
 show_desc <-paste0("Bill Kelly's Blackhole Bandstand playlist for ",play_date," SXM show. ",
                    nrow(missing_tracks), " of ", nrow(playlist),
                    " songs missing.  See Bill's Facebook page for complete track list.")
+
 
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
 print("Making Playlist at Spotify")
