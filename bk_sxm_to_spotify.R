@@ -5,15 +5,15 @@ library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-11-14"
+play_date <- "2020-11-28"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
 # local override of environment variables
-ac = get_spotify_access_token(
-   client_id = Sys.getenv("SPOTIFY_BK_ID"),
-   client_secret = Sys.getenv("SPOTIFY_BK_SECRET")
-)
+#ac = get_spotify_access_token(
+#   client_id = Sys.getenv("SPOTIFY_BK_ID"),
+#   client_secret = Sys.getenv("SPOTIFY_BK_SECRET")
+#)
 # --------------------------------------------------------
 # load and clean up the playlist
 raw_playlist <- read_delim(song_file,delim='\"',
@@ -51,7 +51,9 @@ playlist <- bind_cols(playlist,uri_list) %>% select(song,spot_track,everything()
 # this is needed because my validation for correct song is lousy
 clear_false_postive <- function(playlist,rownum){
    playlist[rownum,] <-playlist[rownum,] %>% 
-      mutate(across(colnames,function(x)x<-NA))
+      mutate(across(.cols=starts_with("spot"),.fns=function(x)x<-NA)) %>% 
+      mutate(across(.cols=starts_with("track"),.fns=function(x)x<-NA)) %>% 
+      mutate(across(.cols=starts_with("release"),.fns=function(x)x<-NA))
    return(playlist)
 }
 
