@@ -5,7 +5,7 @@ library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
-play_date <- "2020-11-28"
+play_date <- "2020-12-19"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -49,12 +49,20 @@ playlist <- bind_cols(playlist,uri_list) %>% select(song,spot_track,everything()
 
 # manually remove false positives by row number
 # this is needed because my validation for correct song is lousy
-clear_false_postive <- function(playlist,rownum){
-   playlist[rownum,] <-playlist[rownum,] %>% 
+clear_false_postive <- function(rownum,source = playlist){
+   source[rownum,] <-source[rownum,] %>% 
       mutate(across(.cols=starts_with("spot"),.fns=function(x)x<-NA)) %>% 
       mutate(across(.cols=starts_with("track"),.fns=function(x)x<-NA)) %>% 
       mutate(across(.cols=starts_with("release"),.fns=function(x)x<-NA))
-   return(playlist)
+   return(source)
+}
+
+fix_false_negative <- function(rownum,source = raw_playlist,target = playlist){
+   new_info <- fuzzy_search_spotify(source$artist[rownum],source$song[rownum])
+   target[rownum,] <- target[rownum,] %>% right_join(new_info)
+   target$artist[rownum] <- source$artist[rownum]
+   target$song[rownum] <- source$song[rownum]
+   return(target)
 }
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
@@ -87,3 +95,4 @@ fb <- paste("Spotify playlist is up.","",
             sep = "\n")
 
 writeClipboard(fb)
+``
