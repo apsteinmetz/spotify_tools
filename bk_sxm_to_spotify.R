@@ -16,13 +16,13 @@ show_name <-paste0("Blackhole_",play_date)
 #)
 # --------------------------------------------------------
 # load and clean up the playlist
-raw_playlist <- read_delim(song_file,delim='\"',
-                           col_names = c("artist","song","dummy")) %>% 
+
+raw_playlist <- read_delim(song_file,delim='"|#',
+                           col_names = c("artist","song","note")) %>% 
    as_tibble() %>% 
-   mutate(dummy = as.character(dummy)) %>% 
-   mutate(song=if_else(!is.na(dummy),dummy,song)) %>%
-   select(-dummy) %>%
-   # don't know what CSW is
+   #mutate(dummy = as.character(dummy)) %>% 
+   #mutate(song=if_else(!is.na(dummy),dummy,song)) %>%
+   #select(-dummy) %>%
    mutate(artist = str_remove_all(artist,"^CSW:")) %>%
    mutate(artist = str_replace_all(artist,"-"," ")) %>%
    mutate(song = str_replace_all(song,"-"," ")) %>%
