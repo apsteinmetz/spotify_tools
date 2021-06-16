@@ -5,8 +5,8 @@ library(spotfuzz)
 # relies on spotify credentials stored in system environment variables
 
 song_file <- paste0("wdub playlist 79-80.csv")
-playlist_name= "WDUB Class of 1980"
-playlist_desc = "From Art Steinmetz's WDUB playlists at Denison University"
+playlist_name= "A Master Class in Pop"
+playlist_desc = "WRKO Boston Now 30 from Week Ending June 15, 1967"
 
 ac = get_spotify_access_token() # local override of environment variables
 # --------------------------------------------------------
@@ -24,14 +24,14 @@ print("Getting Track URIs")
 
 
 uri_list <- spotfuzz::fuzzy_search_spotify(playlist$artist,playlist$title)
-playlist <- bind_cols(raw_playlist,uri_list)
+playlist <- bind_cols(playlist,uri_list)
 
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
 missing_tracks <- playlist %>% filter(is.na(track_uri)) %>% 
    mutate(a_s = paste0(artist,", ",title))
 missing_tracks %>% select(a_s) %>% print(n=25)
-
+s
 # CHANGE THINGS IN SPOTIFY USER ACCOUNT.  CAUTION. ------------------------------------
 print("Making Playlist at Spotify")
 
@@ -42,13 +42,13 @@ spot_playlist <- create_playlist(user_id = get_my_profile()$id,
 
 
 available_tracks <- playlist %>% 
-   filter(!is.na(track.uri)) %>% 
-   pull(track.uri)
+   filter(!is.na(track_uri)) %>% 
+   pull(track_uri)
 
 # load 100 tracks at a time to playlist
 cuts <- cut_width(1:length(available_tracks),100,labels=FALSE)
-for (n in 1:max(cuts)){
-   spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks[which(cuts==n)])
+for (n in 1:length(available_tracks)){
+   spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks[n])
 }
 
 # ----------------------------------------------------------------------
