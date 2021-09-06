@@ -6,7 +6,7 @@ library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2021-08-14"
+play_date <- "2021-09-04"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -95,10 +95,10 @@ spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
 # make text for facebook post and copy to clipboard
 spot_playlist$external_urls$spotify
 fb <- paste("Spotify playlist is up.","",
-            "Playlist URL:",
-            spot_playlist$external_urls$spotify,"",
             "Missing Tracks:",
-            paste(missing_tracks$a_s,collapse = "\n"),"",
+            paste(missing_tracks$a_s,collapse = "\n"),
+            "Playlist URL:",
+            spot_playlist$external_urls$spotify,
             sep = "\n")
 
 writeClipboard(fb)
