@@ -6,9 +6,10 @@ library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2021-09-04"
+play_date <- "2021-09-11"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
+
 
 # manually remove false positives by row number
 # this is needed because my validation for correct song is lousy
