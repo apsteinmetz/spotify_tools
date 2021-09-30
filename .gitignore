@@ -4,3 +4,5 @@
 .Ruserdata
 .httr-oauth
 spotify_tools.Rproj
+set secret token.R
+songs_i_like.nb.html
