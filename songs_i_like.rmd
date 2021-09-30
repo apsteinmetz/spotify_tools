@@ -8,3 +8,135 @@ library(tidyverse)
 library(spotifyr)
 ```
 
+```{r get my saved tracks}
+my_profile <- get_my_profile()
+
+offset = 0
+limit = 50
+my_saved_all <- NULL
+repeat {
+   my_saved_raw <- get_my_saved_tracks(offset = offset,limit = limit)
+   if (is_empty(my_saved_raw)) {
+      print("All Songs Retrieved")
+      break
+   }
+   offset = offset + limit
+   my_saved_all <- bind_rows(my_saved_raw,my_saved_all)
+   print(offset)
+}
+
+
+
+my_saved <- my_saved_all %>%
+   unnest(cols=c(track.artists)) %>% 
+   mutate(artist.name = name) %>% 
+   select(added_at,track.name,artist.name,track.album.name,
+          track.album.release_date,track.id,track.popularity,) %>% 
+   mutate(date_added = as.Date(added_at),
+          year_released = as.numeric(str_extract(track.album.release_date,"^\\d{4}"))) %>% 
+   select(-c(added_at,track.album.release_date)) %>% 
+      as_tibble()
+
+save(my_saved,file="data/my_saved.rdata")
+```
+
+
+```{r get features of track list}
+offset = 0
+limit = 100
+total = nrow(my_saved)
+my_saved_features_all <- NULL
+repeat {
+   my_saved_features_raw <-
+      get_track_audio_features(my_saved$track.id[(offset+1):(offset+limit)])
+   my_saved_features_all <- bind_rows(my_saved_features_raw,my_saved_features_all)
+   print(offset)
+   offset <- offset + limit
+   if (offset >= total) {
+      print("All Songs Retrieved")
+      break
+   }
+}
+
+pitch_names <- c("C","C#","D","D#","E","F","F#","G","G#","A","A#","B")
+my_saved_features <- my_saved_features_all %>% rename(track.id = id) %>% 
+   select(-c(uri,track_href,analysis_url,type))
+my_saved_features$pitch <- as.factor(my_saved_features$key)
+levels(my_saved_features$pitch) <- pitch_names
+my_features <- left_join(my_saved,my_saved_features,by="track.id") %>% 
+   unique() 
+save(my_features,file="data/my_features.rdata")
+   
+```
+
+```{r EDA}
+summary(my_features)
+```
+```{r}
+library(corrplot)
+my_features %>% select(5:20) %>% 
+   mutate(across(contains("date"),as.numeric)) %>% 
+   cor() %>% 
+   corrplot()
+```
+
+```{r}
+library(Hmisc)
+hist.data.frame(my_features[,5:20])
+```
+
+```{r popularity}
+
+my_features %>% ggplot(aes(track.popularity)) + geom_histogram(binwidth = 10) +
+   labs("Most of my 'Liked' Songs Have 'Zero' popularity on Spotify",
+        y = "Count of My Favorites") + 
+   annotate("text", 90,50,label = '"Blinding Light"\n by The Wknd')
+
+```
+
+
+Other people rank songs in the key of F most popular among the songs I like, but key is not a great predictor of popularity.
+```{r keys others}
+my_features %>% 
+   mutate(key_color = ifelse(str_detect(pitch,"#"),"black","white")) %>% 
+   group_by(pitch) %>% 
+   summarise(avg_popularity = mean(track.popularity)) %>% 
+   mutate(key_color = ifelse(str_detect(pitch,"#"),"black","white")) %>% 
+   ggplot(aes(pitch,avg_popularity,fill = key_color)) + geom_col() +
+   scale_fill_manual(values = c("black","white")) +
+   labs(title = "Keys Other People Like",
+        y = "Average Popularity") + 
+   theme(panel.background = element_rect(fill="grey"),
+         panel.grid = element_line(color = "grey"),
+         legend.position = "none")
+
+```
+
+I show a clear preference for major keys. Happy, happy.
+```{r keys me}
+my_features %>% 
+   mutate(key_color = ifelse(str_detect(pitch,"#"),"black","white")) %>% 
+   group_by(pitch) %>% 
+   ggplot(aes(pitch,fill=key_color)) + geom_bar() + 
+   scale_fill_manual(values = c("black","white")) +
+   labs(title = "Keys I Like",
+        y = "Count in My Favorites") + 
+   theme(panel.background = element_rect(fill="grey"),
+         panel.grid = element_line(color = "grey"),
+         legend.position = "none")
+
+```
+```{r valence}
+my_features %>% ggplot(aes(valence)) + geom_histogram(binwidth = .1) +
+   labs("Most of my 'Liked' Songs Have 'Zero' popularity on Spotify",
+        y = "Count of My Favorites",
+        x = "<- Less Happy - Valence - More Happy ->")
+```
+
+
+
+```{r model taste}
+
+
+```
+
