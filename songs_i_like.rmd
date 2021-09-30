@@ -1,0 +1,10 @@
+---
+title: "What Type of Song Do I Like?"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(spotifyr)
+```
+
