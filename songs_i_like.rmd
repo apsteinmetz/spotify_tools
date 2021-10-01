@@ -57,15 +57,23 @@ repeat {
       break
    }
 }
+```
 
+
+```{r wrangle}
 pitch_names <- c("C","C#","D","D#","E","F","F#","G","G#","A","A#","B")
+mode_names <- c("minor","major")
 my_saved_features <- my_saved_features_all %>% rename(track.id = id) %>% 
    select(-c(uri,track_href,analysis_url,type))
 my_saved_features$pitch <- as.factor(my_saved_features$key)
 levels(my_saved_features$pitch) <- pitch_names
+my_saved_features$mode_name <- as.factor(my_saved_features$mode)
+levels(my_saved_features$mode_name) <- mode_names
 my_features <- left_join(my_saved,my_saved_features,by="track.id") %>% 
    unique() 
 save(my_features,file="data/my_features.rdata")
+my_features$mode_name <- as.factor(my_features$mode)
+levels(my_features$mode_name) <- mode_names
    
 ```
 
