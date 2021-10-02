@@ -8,47 +8,22 @@ library(tidyverse)
 library(spotifyr)
 ```
 
+There are about 1500 songs that SheilaB has played at least twice. Of those, about 1200 are on Spotify.  Missing songs are either not on Spotify, have spellings on the WFMU playlists that differ from what Spotify knows or are non-US releases that are listed in non-English alphabets (e.g. Pizzacato Five).
+
 ```{r get my saved tracks}
-my_profile <- get_my_profile()
-
-offset = 0
-limit = 50
-my_saved_all <- NULL
-repeat {
-   my_saved_raw <- get_my_saved_tracks(offset = offset,limit = limit)
-   if (is_empty(my_saved_raw)) {
-      print("All Songs Retrieved")
-      break
-   }
-   offset = offset + limit
-   my_saved_all <- bind_rows(my_saved_raw,my_saved_all)
-   print(offset)
-}
-
-
-
-my_saved <- my_saved_all %>%
-   unnest(cols=c(track.artists)) %>% 
-   mutate(artist.name = name) %>% 
-   select(added_at,track.name,artist.name,track.album.name,
-          track.album.release_date,track.id,track.popularity,) %>% 
-   mutate(date_added = as.Date(added_at),
-          year_released = as.numeric(str_extract(track.album.release_date,"^\\d{4}"))) %>% 
-   select(-c(added_at,track.album.release_date)) %>% 
-      as_tibble()
-
-save(my_saved,file="data/my_saved.rdata")
+load("data/sb_tracks.rdata")
 ```
 
 
 ```{r get features of track list}
+track_list <-sb_tracks
 offset = 0
 limit = 100
-total = nrow(my_saved)
+total = nrow(track_list)
 my_saved_features_all <- NULL
 repeat {
    my_saved_features_raw <-
-      get_track_audio_features(my_saved$track.id[(offset+1):(offset+limit)])
+      get_track_audio_features(track_list$track.id[(offset+1):(offset+limit)])
    my_saved_features_all <- bind_rows(my_saved_features_raw,my_saved_features_all)
    print(offset)
    offset <- offset + limit
@@ -69,28 +44,34 @@ my_saved_features$pitch <- as.factor(my_saved_features$key)
 levels(my_saved_features$pitch) <- pitch_names
 my_saved_features$mode_name <- as.factor(my_saved_features$mode)
 levels(my_saved_features$mode_name) <- mode_names
-my_saved_features$full_key <- as.factor(paste(my_saved_features$pitch,my_features$mode_name))
-my_features <- left_join(my_saved,my_saved_features,by="track.id") %>% 
+my_features <- left_join(track_list,my_saved_features,by="track.id") %>% 
    unique() 
-save(my_features,file="data/my_features.rdata")
+my_features <- my_features %>% 
+   mutate(full_key = paste(pitch,mode_name)) %>% 
+   mutate(year_released = as.numeric(str_extract(release_date,"^\\d{4}"))) %>% 
+   select(track.id,spot_artist,spot_track,spot_album,track_number,
+          release_date,pitch,mode_name,full_key,everything()) %>% 
+   na.omit()
+
+
+save(my_features,file="data/sb_features.rdata")
 
 ```
 
 ```{r EDA}
 summary(my_features)
 ```
-
 ```{r}
 library(corrplot)
-my_features %>% select(5:20) %>% 
-   mutate(across(contains("date"),as.numeric)) %>% 
+my_features %>% select(10:24) %>% 
+   # mutate(across(contains("date"),as.numeric)) %>% 
    cor() %>% 
    corrplot()
 ```
 
 ```{r}
 library(Hmisc)
-hist.data.frame(my_features[,5:20])
+hist.data.frame(my_features[,10:24])
 ```
 
 
@@ -99,7 +80,7 @@ Key is not a great predictor of popularity.
 my_features %>% 
    mutate(key_color = ifelse(str_detect(pitch,"#"),"black","white")) %>% 
    group_by(full_key) %>% 
-   summarise(avg_popularity = mean(track.popularity)) %>% 
+   summarise(avg_popularity = mean(popularity)) %>% 
    mutate(key_color = ifelse(str_detect(full_key,"minor"),"black","white")) %>% 
    ggplot(aes(full_key,avg_popularity,fill = key_color)) + geom_col() +
    scale_fill_manual(values = c("black","white")) +
@@ -121,18 +102,18 @@ my_features %>%
    ggplot(aes(mode_name)) + geom_bar()
 ```
 
-I show a clear preference for major keys. Happy, happy.
+SheilaB show a clear preference for major keys. Happy, happy.
 ```{r keys me}
 my_features %>% 
    mutate(key_color = ifelse(str_detect(full_key,"minor"),"black","white")) %>% 
    group_by(full_key) %>% 
    ggplot(aes(full_key,fill=key_color)) + geom_bar() + 
    scale_fill_manual(values = c("black","white")) +
-   labs(title = "Keys I Like",
+   labs(title = "Keys SheilaB Likes",
         y = "Count of Plays",
         x = "Dominant Key") + 
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid = element_line("grey"),
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
          legend.position = "none",
          axis.text.x = element_text(angle=45,hjust = 1,vjust=1))
 
@@ -140,54 +121,51 @@ my_features %>%
 ```
 ```{r valence}
 my_features %>% ggplot(aes(valence)) + geom_density(fill="orange") +
-   labs(title = "I Like Happy Songs",
+   labs(title = "SheilaB Plays A Lot of Happy Songs",
         y = "Relative Frequency of Songs",
         x = '<-- SAD - Spotify "Valence" - HAPPY -->') + 
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid = element_line("grey"),
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
          axis.text.y = element_blank())
 ```
 
 ```{r danceability}
 my_features %>% ggplot(aes(danceability)) + geom_density(fill="orange") +
-   labs(title = "I Likes to Dance, But Not Too Much",
+   labs(title = "SheilaB Likes to Dance, But Not Too Much",
         y = "Relative Frequency of Songs",
         x = 'Spotify "Danceability"') + 
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid = element_line("grey"),
-         axis.text.y = element_blank())
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("orange"))
 ```
 
 ```{r BPM}
 my_features %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
-   labs(title = "120 BPM is my Sweet Spot",
+   labs(title = "SheilaB Brings the BPM",
         y = "Relative Frequency of Songs",
         x = 'Beats Per Minute') + 
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid = element_line("grey"),
-         panel.grid.major.x = element_line("orange"),
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
          axis.text.y = element_blank())
 ```
 ```{r popularity}
-my_features %>% ggplot(aes(track.popularity)) + geom_density(fill="orange") +
-   labs(title = "My Music Is Not Very Popular",
+my_features %>% ggplot(aes(popularity)) + geom_density(fill="orange") +
+   labs(title = "SheilaB Likes the Familiar But Not the Hits",
         y = "Relative Frequency of Songs",
         x = 'Spotify Relative "Popularity"') + 
-   annotate("text", 85,.005,label = '"Blinding Light"\n by The Wknd') + 
-
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid= element_line("grey"),
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid= element_line("#F08080"),
          panel.grid.major.x = element_line("orange"),
          axis.text.y = element_blank())
 ```
 ```{r year}
 my_features %>% ggplot(aes(year_released)) + geom_histogram(binwidth = 1,fill="orange") +
-   labs(title = "I Like the 1980s",
+   labs(title = "SheilaB Likes the Late 1960s",
         y = "Count of Songs",
         x = 'Year Released') + 
+   annotate("text",x=1932,y=10,label = "Frankie\nCarie") +
    scale_x_continuous(breaks = seq(from=1930,to=2021,by=5)) + 
-   theme(panel.background = element_rect(fill= "grey",),
-         panel.grid= element_line("grey"),
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid= element_line("#F08080"),
          panel.grid.major.x = element_line("orange"))
 ```
 
