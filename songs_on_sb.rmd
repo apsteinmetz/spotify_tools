@@ -228,20 +228,59 @@ all_artists[1:2,] %>%
 
 Get aggregate audio features for top artists.
 
-First, get top artists.
+First, get top artists on SBB.
 ```{r}
 load("~/R Projects/wfmu/playlists.Rdata")
 
+
+playcount <- 11 # this roughly corresponds to top 100 artists
 sb_top_artists <- playlists %>%
    filter(DJ == "CF") %>% 
    group_by(ArtistToken) %>% 
    summarise(play_count = n()) %>% 
-   filter(play_count>11) %>% 
+   filter(play_count > playcount) %>% 
    arrange(desc(play_count))
 
+# It's a big list. release some memory.
+rm(playlists)
 ```
-Get audio features
+Get audio features for top artists
 ```{r}
 
+my_get_artist_audio_features <-function(artist){
+   features <- tryCatch(get_artist_audio_features(artist),error = function(cond) return(NULL))
+   print(paste(match(artist,sb_top_artists$ArtistToken),artist))
+   return(features)
+}
+
+# map would be nice but if it fails during execution you loose all the iterations so far
+#artist_features <- sb_top_artists$ArtistToken %>% 
+#   map(my_get_artist_audio_features)
+
+
+artist_features_raw <- NULL
+
+for (artist in sb_top_artists$ArtistToken[92:94]){
+   features_raw <- my_get_artist_audio_features(artist)
+   artist_features_raw <- bind_rows(artist_features_raw,features_raw)
+}
+
+save(artist_features_raw, file = "data/sb_artist_features_raw.rdata")
+
+spot_artist_names <- artist_features_raw %>% select(artist_name) %>% unique()
+SBB_artist_names <- SBB_all_tracks %>% transmute(artist_name)
+
+full_join(SBB_artist_names,spot_artist_names)
+
+SBB_all_tracks <- playlists %>% filter(DJ == "CF") %>% 
+   transmute(artist_name = Artist,track_name = Title) %>% 
+   unique() 
+
+tryCatch(1, finally = print("Hello"))
+e <- simpleError("test error")
+## Not run: 
+ stop(e)
+ tryCatch(stop(e), finally = print("Hello"))
+ tryCatch(stop("fred"), finally = print("Hello"))
 ```
 
