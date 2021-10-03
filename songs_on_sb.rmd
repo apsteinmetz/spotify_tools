@@ -173,59 +173,6 @@ my_features %>% ggplot(aes(year_released)) + geom_histogram(binwidth = 1,fill="o
          panel.grid= element_line("#F08080"),
          panel.grid.major.x = element_line("orange"))
 ```
-
-Can we work with a larger list and search by artist since many artists will have multiple plays?
-
-Loop through artists to get albums. TEST just take top two artists
-```{r}
-all_artists <- all_tracks %>% 
-   select(ArtistToken,song) %>% 
-   group_by(ArtistToken) %>% 
-   unique() %>% 
-   nest(songs = song) %>% 
-   mutate(song_count = nrow(songs[[1]])) %>% 
-   arrange(desc(song_count))
-
-
-artists <- all_artists$ArtistToken[1:2]
-
-albums_raw <- artists %>% 
-   map(function(artist) search_spotify(q=paste0("artist:",artist),type=c("album"),limit = 50))
-
-albums <- albums_raw %>% 
-   bind_rows() %>% 
-   transmute(album_id = id,album_name = name,artists)  %>% 
-   unnest(artists) %>% 
-   transmute(album_id,album_name,artist_id = id,artist_name=name)
-
-```
-Loop through albums to get tracks
-
-```{r}
-
-#this ain't fast.  We can't submit more than one album at a time
-tracks_raw <- albums$album_id %>% map(function(album) get_album_tracks(album,limit = 50))
-
-tracks <- bind_cols(albums,tibble(tracks_raw = tracks_raw)) %>% 
-   unnest(tracks_raw) %>% 
-   transmute(artist_id,artist_name,album_id,album_name,track_id=id,track_name = name)
-   
-```
-
-
-Match tracks to desired songs
-```{r}
-all_artists[1:2,] %>% 
-   unnest(songs) %>% 
-   ungroup() %>% 
-   transmute(artist_name = ArtistToken, track_name=song) %>% 
-   unique() %>% 
-   left_join(tracks,by = c("artist_name", "track_name")) %>% 
-   na.omit() %>% 
-   group_by(artist_name,track_name) %>% 
-   slice(1)
-```
-
 Get aggregate audio features for top artists.
 
 First, get top artists on SBB.
@@ -258,29 +205,49 @@ my_get_artist_audio_features <-function(artist){
 #   map(my_get_artist_audio_features)
 
 
-artist_features_raw <- NULL
-
+#artist_features_raw <- NULL
 for (artist in sb_top_artists$ArtistToken[92:94]){
    features_raw <- my_get_artist_audio_features(artist)
    artist_features_raw <- bind_rows(artist_features_raw,features_raw)
 }
 
 save(artist_features_raw, file = "data/sb_artist_features_raw.rdata")
-
-spot_artist_names <- artist_features_raw %>% select(artist_name) %>% unique()
-SBB_artist_names <- SBB_all_tracks %>% transmute(artist_name)
-
-full_join(SBB_artist_names,spot_artist_names)
-
-SBB_all_tracks <- playlists %>% filter(DJ == "CF") %>% 
-   transmute(artist_name = Artist,track_name = Title) %>% 
-   unique() 
-
-tryCatch(1, finally = print("Hello"))
-e <- simpleError("test error")
-## Not run: 
- stop(e)
- tryCatch(stop(e), finally = print("Hello"))
- tryCatch(stop("fred"), finally = print("Hello"))
+my_features2 <- artist_features_raw %>% 
+   as_tibble()
 ```
 
+```{r year by artist}
+my_features2 %>% 
+   filter(album_release_year > 1900) %>% 
+   ggplot(aes(album_release_year)) + geom_histogram(binwidth = 1,fill="orange") +
+   labs(title = "SheilaB Likes the Late 1960s",
+        y = "Count of Songs",
+        x = 'Year Released') + 
+   # annotate("text",x=1932,y=10,label = "Frankie\nCarie") +
+   scale_x_continuous(breaks = seq(from=1930,to=2021,by=5)) + 
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid= element_line("#F08080"),
+         panel.grid.major.x = element_line("orange"))
+
+```
+
+```{r BPM artists}
+my_features2 %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
+   labs(title = "BPM of Top 100 SBB Artists",
+        y = "Relative Frequency of Songs",
+        x = 'Beats Per Minute') + 
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
+         axis.text.y = element_blank())
+```
+```{r valence artists}
+my_features2 %>% ggplot(aes(valence)) + geom_density(fill="orange") +
+   geom_density(data=my_features,aes(valence),fill="green",alpha=0.5) +
+   labs(title = "SheilaB Plays A Lot of Happy Songs",
+        subtitle = "Green  - SBB 1000 most played songs\nOrange - Full Catalog of SBB Top 100 Artists",
+        y = "Relative Frequency of Songs",
+        x = '<-- SAD - Spotify "Valence" - HAPPY -->') + 
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
+         axis.text.y = element_blank())
+```
