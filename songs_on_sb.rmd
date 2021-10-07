@@ -1,24 +1,28 @@
 ---
-title: "What Type of Song Do I Like?"
-output: html_notebook
+title: 'What Type of Songs Are Played on "Sophisticated Boom Boom"?'
+output:
+  pdf_document: default
+  html_notebook:
+    code_folding: hide
 ---
 
-```{r}
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(spotifyr)
 library(purrr)
 ```
+# A Data-Driven Approach
+Spotify does some juju analysis on songs to extract audio features like "danceability," "valence" (their word for happiness), key, BPM, and more.  Account holders can access these features. I was playing around with my "liked" songs on Spotify to see if I could predict what music I might like.  Spotify already does this, of course, but I wanted to play with the tools myself.
 
-There are about 1500 songs that SheilaB has played at least twice. Of those, about 1200 are findable on Spotify.  Missing songs are either not on Spotify, have spellings on the WFMU playlists that differ from what Spotify knows or are non-US releases that are listed in non-English alphabets (e.g. Pizzacato Five).
+I then thought it might be interesting to run this analysis on your show.  Thanks to my handy-dandy "WFMU Playlist Analyzer" (wfmu.servebeer.com), I can easily list every song you've ever played and find your most played songs and artists.  The assumption I make is that your top 1500 songs are representative of the nearly 10,000 unique songs you have played since the start of  your show. 
+There are about 1500 songs that SBB has played at least twice. Of those, about 1200 are findable on Spotify. Missing songs are either not on Spotify, have spellings on the WFMU playlists that differ from what Spotify knows or are non-US releases that are listed in non-English alphabets (e.g. Pizzacato Five). 
 
-Once we have the track ID, we can retrieve Spotify's audio features data for each track and do some analysis.
-
-
+Here are some things that Spotify knows about your top songs.
 
 ```{r get my saved tracks}
 load("data/sb_tracks.rdata")
 ```
-
 
 ```{r get features of track list, eval=FALSE, include=FALSE}
 track_list <-sb_tracks
@@ -40,7 +44,7 @@ repeat {
 ```
 
 
-```{r wrangle}
+```{r wrangle, eval=FALSE, include=FALSE}
 pitch_names <- c("C","C#","D","D#","E","F","F#","G","G#","A","A#","B")
 mode_names <- c("minor","major")
 my_saved_features <- my_saved_features_all %>% rename(track.id = id) %>% 
@@ -60,13 +64,18 @@ my_features <- my_features %>%
 
 
 save(my_features,file="data/sb_features.rdata")
+```
+
+
+```{r load sb features}
+load("data/sb_features.rdata")
 
 ```
 
-```{r EDA}
+```{r EDA, eval=FALSE, include=FALSE}
 summary(my_features)
 ```
-```{r}
+```{r eval=FALSE, include=FALSE}
 library(corrplot)
 my_features %>% select(10:24) %>% 
    # mutate(across(contains("date"),as.numeric)) %>% 
@@ -74,14 +83,12 @@ my_features %>% select(10:24) %>%
    corrplot()
 ```
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 library(Hmisc)
 hist.data.frame(my_features[,10:24])
 ```
 
-
-Key is not a great predictor of popularity.
-```{r keys others}
+```{r keys others, eval=FALSE, include=FALSE}
 my_features %>% 
    mutate(key_color = ifelse(str_detect(pitch,"#"),"black","white")) %>% 
    group_by(full_key) %>% 
@@ -98,16 +105,18 @@ my_features %>%
 
 ```
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 table(my_features[c("pitch","mode_name")]) %>% as_tibble() %>% arrange(desc(n))
 ```
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 my_features %>% 
    ggplot(aes(mode_name)) + geom_bar()
 ```
 
-SheilaB show a clear preference for major keys. Happy, happy.
+\newpage
+The SBB show has a preference for major keys. Happy, happy!  Of the 1200 songs I have data for, about 120, or 10%, are in C-major.  A-minor is the (ahem) major exception.  I don't know how Spotify determines key since, obviously, lots of songs have key changes.
+
 ```{r keys me}
 my_features %>% 
    mutate(key_color = ifelse(str_detect(full_key,"minor"),"black","white")) %>% 
@@ -124,6 +133,10 @@ my_features %>%
 
 
 ```
+
+\newpage
+"Valence" is another cryptic measure that determines "happiness."  I don't know how it is calculated but in the spot checks I've done it seems to be fairly accurate.  The plot below is a "density plot." It shows the relative occurance on the y-axis of  how often you play songs that have a certainl valence, shown on the x-axis.  SBB definitely skews toward happy songs.
+
 ```{r valence}
 my_features %>% ggplot(aes(valence)) + geom_density(fill="orange") +
    labs(title = "SheilaB Plays A Lot of Happy Songs",
@@ -134,6 +147,9 @@ my_features %>% ggplot(aes(valence)) + geom_density(fill="orange") +
          axis.text.y = element_blank())
 ```
 
+\newpage
+When we look at "dancebiilty" the distribution is much less spread out.  There is a sweet spot of rhythm you like.
+
 ```{r danceability}
 my_features %>% ggplot(aes(danceability)) + geom_density(fill="orange") +
    labs(title = "SheilaB Likes to Dance, But Not Too Much",
@@ -142,6 +158,9 @@ my_features %>% ggplot(aes(danceability)) + geom_density(fill="orange") +
    theme(panel.background = element_rect(fill= "#F08080",),
          panel.grid = element_line("orange"))
 ```
+
+\newpage
+Likewise, you show a strong preference for songs in the 120 BPM range.  Though I think that is true for most popular music (as we'll see below).
 
 ```{r BPM}
 my_features %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
@@ -152,6 +171,10 @@ my_features %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
          panel.grid = element_line("#F08080"),
          axis.text.y = element_blank())
 ```
+
+\newpage
+How popular are  your favorite songs on Spotify?  For me, this chart is even more skewed to unpopular music - thanks to WFMU! The only mega-hit I've liked on Spotify is "Blinding Light" by "The Wknd."
+
 ```{r popularity}
 my_features %>% ggplot(aes(popularity)) + geom_density(fill="orange") +
    labs(title = "SheilaB Likes the Familiar But Not the Hits",
@@ -162,9 +185,14 @@ my_features %>% ggplot(aes(popularity)) + geom_density(fill="orange") +
          panel.grid.major.x = element_line("orange"),
          axis.text.y = element_blank())
 ```
+
+\newpage
+There were so many great pop songs and female singers in the late 1960s coming out of Motown and the Brill Building,  you and I would agree.  The '80s? Not so much for you.  (This plot for me shows my love of 80's new wave).  The oldest song in your top 1200 is from 1934.
+
 ```{r year}
 my_features %>% ggplot(aes(year_released)) + geom_histogram(binwidth = 1,fill="orange") +
    labs(title = "SheilaB Likes the Late 1960s",
+        subtitle = "But the '70s and '80s are not her thing.",
         y = "Count of Songs",
         x = 'Year Released') + 
    annotate("text",x=1932,y=10,label = "Frankie\nCarie") +
@@ -173,9 +201,7 @@ my_features %>% ggplot(aes(year_released)) + geom_histogram(binwidth = 1,fill="o
          panel.grid= element_line("#F08080"),
          panel.grid.major.x = element_line("orange"))
 ```
-Get aggregate audio features for top artists.
 
-First, get top artists on SBB.
 ```{r}
 load("~/R Projects/wfmu/playlists.Rdata")
 
@@ -191,8 +217,12 @@ sb_top_artists <- playlists %>%
 # It's a big list. release some memory.
 rm(playlists)
 ```
-Get audio features for top artists
-```{r}
+```{r eval=FALSE, include=FALSE}
+my_get_artist_audio_features <- possibly(function(artist){
+      features <- get_artist_audio_features(artist)
+      print(paste(match(artist,sb_top_artists$ArtistToken),artist))
+      return(as_tibble(features))
+   }, otherwise = NULL)
 
 my_get_artist_audio_features <-function(artist){
    features <- tryCatch(get_artist_audio_features(artist),error = function(cond) return(NULL))
@@ -212,11 +242,17 @@ for (artist in sb_top_artists$ArtistToken[92:94]){
 }
 
 save(artist_features_raw, file = "data/sb_artist_features_raw.rdata")
+```
+
+
+```{r}
+load("data/sb_artist_features_raw.rdata")
+
 my_features2 <- artist_features_raw %>% 
    as_tibble()
 ```
 
-```{r year by artist}
+```{r year by artist, eval=FALSE, include=FALSE}
 my_features2 %>% 
    filter(album_release_year > 1900) %>% 
    ggplot(aes(album_release_year)) + geom_histogram(binwidth = 1,fill="orange") +
@@ -231,15 +267,9 @@ my_features2 %>%
 
 ```
 
-```{r BPM artists}
-my_features2 %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
-   labs(title = "BPM of Top 100 SBB Artists",
-        y = "Relative Frequency of Songs",
-        x = 'Beats Per Minute') + 
-   theme(panel.background = element_rect(fill= "#F08080",),
-         panel.grid = element_line("#F08080"),
-         axis.text.y = element_blank())
-```
+\newpage
+Another way of looking at your show is to get the features for your top artists, rather than songs. I took a look at your top 100 artists (top 107, actually. Any artist played more than 11 times made the cut).  What the chart below shows is that the full catalog of your favorite artists is not as happy as the songs you choose to play. Interesting!
+
 ```{r valence artists}
 my_features2 %>% ggplot(aes(valence)) + geom_density(fill="orange") +
    geom_density(data=my_features,aes(valence),fill="green",alpha=0.5) +
@@ -251,3 +281,20 @@ my_features2 %>% ggplot(aes(valence)) + geom_density(fill="orange") +
          panel.grid = element_line("#F08080"),
          axis.text.y = element_blank())
 ```
+
+\newpage
+Let's go back to the question of BPM. Is SBB different that the catalog of it's favorite artists? No. What we're seeing here is just where most pop music is. So not that interesting.
+
+```{r BPM artists}
+my_features2 %>% ggplot(aes(tempo)) + geom_density(fill="orange") +
+   geom_density(data=my_features,aes(tempo),fill="green",alpha=0.5) +
+   labs(title = "The BPM of Artist Catalogs Matches What SBB Plays",
+        subtitle = "Green  - SBB 1000 most played songs\nOrange - Full Catalog of SBB Top 100 Artists",
+        y = "Relative Frequency of Songs",
+        x = 'BPM') + 
+   theme(panel.background = element_rect(fill= "#F08080",),
+         panel.grid = element_line("#F08080"),
+         axis.text.y = element_blank())
+```
+
+I'll stop there.  If you made it this far without falling asleep, I appreciate your indulgence.  If you have any questions about this data, please ask.
