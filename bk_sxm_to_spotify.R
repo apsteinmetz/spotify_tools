@@ -6,7 +6,7 @@ library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2021-09-25"
+play_date <- "2021-10-09"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -36,10 +36,11 @@ fix_false_negative <- function(rownum,source = raw_playlist,target = playlist){
 # --------------------------------------------------------
 # load and clean up the playlist
 
-raw_playlist <- read_delim(song_file,delim='"|#',
-                           col_names = c("artist","song","note")) %>% 
+raw_playlist <- read_delim(song_file,delim='"',
+                           col_names = c("artist","song","note"),
+                           show_col_types = FALSE) %>% 
    as_tibble() %>% 
-   #mutate(dummy = as.character(dummy)) %>% 
+   #mutate(dummy = as.character(dummy)) %>%
    #mutate(song=if_else(!is.na(dummy),dummy,song)) %>%
    #select(-dummy) %>%
    mutate(artist = str_remove_all(artist,"^CSW:")) %>%
@@ -90,7 +91,8 @@ spot_playlist <- create_playlist(user_id = get_my_profile()$id,
                                 name = show_name,
                                 description = show_desc)
 
-spotifyr::add_tracks_to_playlist(spot_playlist$id,available_tracks)
+add_tracks_to_playlist(spot_playlist$id,
+                       str_remove(available_tracks,"spotify:track:"))
 
 # ----------------------------------------------------------------------
 # make text for facebook post and copy to clipboard
