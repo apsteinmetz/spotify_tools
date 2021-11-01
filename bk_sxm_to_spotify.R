@@ -6,7 +6,7 @@ library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2021-10-23"
+play_date <- "2021-10-30"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
@@ -29,14 +29,14 @@ fix_false_negative <- function(rownum,source = raw_playlist,target = playlist){
    return(target)
 }
 # local override of environment variables
-ac = get_spotify_access_token(
-   client_id = Sys.getenv("SPOTIFY_CLIENT_ID"),
-   client_secret = Sys.getenv("SPOTIFY_CLIENT_SECRET")
-)
-auth = get_spotify_authorization_code(
-   client_id = Sys.getenv("SPOTIFY_CLIENT_ID"),
-   client_secret = Sys.getenv("SPOTIFY_CLIENT_SECRET")
-)
+# ac = get_spotify_access_token(
+#    client_id = Sys.getenv("SPOTIFY_CLIENT_ID"),
+#    client_secret = Sys.getenv("SPOTIFY_CLIENT_SECRET")
+# )
+# auth = get_spotify_authorization_code(
+#    client_id = Sys.getenv("SPOTIFY_CLIENT_ID"),
+#    client_secret = Sys.getenv("SPOTIFY_CLIENT_SECRET")
+# )
 # --------------------------------------------------------
 # load and clean up the playlist
 
