@@ -1,12 +1,12 @@
 # make playlist for spotify from Bill Kelly's
 # SiriusXM playlist posts on Facebook
-devtools::install_github('charlie86/spotifyr')
+#devtools::install_github('charlie86/spotifyr')
 library(tidyverse)
 library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2021-11-06"
+play_date <- "2021-11-27"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
 
