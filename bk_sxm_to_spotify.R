@@ -6,10 +6,9 @@ library(spotifyr)
 library(spotfuzz)
 
 # relies on spotify credentials stored in system environment variables
-play_date <- "2022-03-05"
+play_date <- "2022-04-02"
 song_file <- paste0("raw_bk_playlists/bk_",play_date,".txt")
 show_name <-paste0("Blackhole_",play_date)
-
 
 # manually remove false positives by row number
 # this is needed because my validation for correct song is lousy
@@ -58,7 +57,6 @@ raw_playlist <- read_delim(song_file,delim='"',
 
 raw_playlist <- raw_playlist %>% mutate(artist = str_trim(str_remove(artist,"[0-9]{0,2}\\)")))
 
-
 # MAIN FLOW OF PROGRAM --------------------------------------------------
 # SEARCH FOR SONG AT SPOTIFY AND RETRIEVE URI FOR PLAYLIST
 #why doesn't this work?
@@ -69,14 +67,27 @@ print("Getting Track URIs")
 
 
 playlist <- raw_playlist
-uri_list <- fuzzy_search_spotify(playlist$artist,
-                                 playlist$song,
-                                 progress = TRUE)
+# uri_list <- fuzzy_search_spotify(playlist$artist,
+#                                  playlist$song,
+#                                  progress = TRUE)
+
+uri_list <- tibble()
+for (n in 1:nrow(raw_playlist)){
+  uri <- quick_search_spotify(playlist$artist[n],
+                                    playlist$song[n])
+  print(paste(playlist$song[n],playlist$artist[n],uri$spot_artist))
+  uri_list <- bind_rows(uri_list,uri)
+   
+}
+
 playlist <- bind_cols(playlist,uri_list) %>% select(song,spot_track,everything())
 
 
 
 # do manual corrections here
+false_positives_maybe <- playlist %>% 
+   filter(song != spot_track)
+false_positives_maybe
 
 available_tracks <- playlist %>% filter(!is.na(track_uri)) %>% pull(track_uri)
 missing_tracks <- playlist %>% filter(is.na(track_uri)) %>% 
